@@ -6,17 +6,22 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-movies = [{:title => 'Aladdin', :rating => 'G', :release_date => '25-Nov-1992'},
-    	  {:title => 'The Terminator', :rating => 'R', :release_date => '26-Oct-1984'},
-    	  {:title => 'When Harry Met Sally', :rating => 'R', :release_date => '21-Jul-1989'},
-      	  {:title => 'The Help', :rating => 'PG-13', :release_date => '10-Aug-2011'},
-      	  {:title => 'Chocolat', :rating => 'PG-13', :release_date => '5-Jan-2001'},
-      	  {:title => 'Amelie', :rating => 'R', :release_date => '25-Apr-2001'},
-      	  {:title => '2001: A Space Odyssey', :rating => 'G', :release_date => '6-Apr-1968'},
-      	  {:title => 'The Incredibles', :rating => 'PG', :release_date => '5-Nov-2004'},
-      	  {:title => 'Raiders of the Lost Ark', :rating => 'PG', :release_date => '12-Jun-1981'},
-      	  {:title => 'Chicken Run', :rating => 'G', :release_date => '21-Jun-2000'},
-  	 ]
+movies = [
+
+{:course_num => 'COMS W1004', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm'},
+
+{:course_num => 'COMS W3107', :dept => 'Computer Science', :course_name => 'Clean Object-Oriented Design', :professor => 'John Kender', :requirement => 'General Technical Requirement', :course_time => 'MW 1:10pm-2:25pm'},
+
+
+{:course_num => 'COMS W3134', :dept => 'Computer Science', :course_name => 'Data Structures in Java', :professor => 'Paul Blaer', :requirement => 'Major Core', :course_time => 'MW 5:40pm-6:55pm'},
+
+
+{:course_num => 'COMS W4771', :dept => 'Computer Science', :course_name => 'Machine Learning', :professor => 'Nakul Verma', :requirement => 'Track Course', :course_time => 'TR 1:10pm-2:25pm'},
+
+
+{:course_num => 'COMS W4995', :dept => 'Computer Science', :course_name => 'Topics in Computer Science: Applied Deep Learning', :professor => 'Joshua B Gordon', :requirement => 'General Technical Elective', :course_time => 'R 7:00pm-9:30pm'},
+  	 
+	]
 
 movies.each do |movie|
   Movie.create!(movie)

@@ -1,35 +1,38 @@
 <!--  This file is app/views/movies/index.html.erb -->
-<h2>All Movies</h2>
-
-<%#  Part 2: Start here... %>
+<h2>Fall 2021 Courses</h2>
 
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
-      <th>Rating</th>
-      <th>Release Date</th>
-      <th>More Info</th>
+      <th>Course Number</th>
+      <th>Department</th>
+      <th>Course Name</th>
+      <th>Professor</th>
+      <th>Requirement</th>
+      <th>Course Day/Time</th>
     </tr>
   </thead>
   <tbody>
     <% @movies.each do |movie| %>
       <tr>
         <td>
-          <%= movie.title %>
+          <%= movie.course_num %>
         </td>
         <td>
-          <%= movie.rating %>
+          <%= movie.dept %>
         </td>
         <td>
-          <%= movie.release_date %>
+          <%= movie.course_name %>
         </td>
         <td>
-          <%= movie.director %>
+          <%= movie.professor %>
         </td>
+	<td>
+	  <%= movie.requirement%>
+	</td>
         <td>
-          <%= link_to "More about #{movie.title}", movie_path(movie) %>
-        </td>
+	  <%= movie.course_time%>
+	</td>
       </tr>
     <% end %>
   </tbody>

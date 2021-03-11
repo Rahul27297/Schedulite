@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     ZenTest (4.11.2)
     actionmailer (4.2.10)
@@ -192,6 +193,7 @@ DEPENDENCIES
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner (= 1.4.1)
+  execjs
   jquery-rails
   launchy
   pg
