@@ -6,7 +6,6 @@ class Coursedetails < ActiveRecord::Migration
     end
   end    
   def down
-    drop_table :movies
     drop_table :classdetails
   end
 end
