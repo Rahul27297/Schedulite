@@ -23,6 +23,16 @@ movies = [
   	 
 	]
 
+classdetails = [
+    {:number => 'COMS W1004', :detail => 'Computer Science.....'},
+    {:number => 'COMS W3134', :detail => 'Computer Science.....'},
+    {:number => 'COMS W4995', :detail => 'Computer Science.....'}
+    ]
+
 movies.each do |movie|
   Movie.create!(movie)
+end
+
+classdetails.each do |cdetail|
+  Classdetail.create!(cdetail)
 end

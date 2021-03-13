@@ -33,6 +33,9 @@
         <td>
 	  <%= movie.course_time%>
 	</td>
+    <td>
+      <%= link_to "More about #{movie.course_name}", movie_path(movie) %>
+    </td>
       </tr>
     <% end %>
   </tbody>
