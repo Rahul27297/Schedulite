@@ -939,3 +939,186 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (0.9ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 124.123.185.199 at 2021-03-13 10:39:39 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 10:39:39 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 239ms (Views: 211.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/1" for 124.123.185.199 at 2021-03-13 10:39:52 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClassdetail Load (0.1ms)[0m  [1mSELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1[0m  [["number", "COMS W1004"]]
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 124.123.185.199 at 2021-03-13 13:49:18 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 13:49:19 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 289ms (Views: 250.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies/3" for 124.123.185.199 at 2021-03-13 13:55:06 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mClassdetail Load (0.1ms)[0m  [1mSELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1[0m  [["number", "COMS W3134"]]
+  Rendered movies/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 13:55:15 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:12:10 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 346ms (Views: 310.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 124.123.185.199 at 2021-03-13 14:12:42 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:12:42 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 124.123.185.199 at 2021-03-13 14:13:15 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClassdetail Load (0.1ms)[0m  SELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1  [["number", "COMS W1004"]]
+  Rendered movies/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/columbia-university-logo-774472faaf6013c4287a6f25af534ac69ce97630b430c511f35f181e44a206d5.jpg" for 124.123.185.199 at 2021-03-13 14:13:15 +0000
+
+
+Started GET "/" for 124.123.185.199 at 2021-03-13 14:37:09 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:37:09 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 263ms (Views: 227.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-8e1b017dce03e87beeec2bd4868e42f76b0d2ef7aff0ed07d390c9e952cbc4e9.css?body=1" for 124.123.185.199 at 2021-03-13 14:37:10 +0000
+
+
+Started GET "/movies/1" for 124.123.185.199 at 2021-03-13 14:37:12 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClassdetail Load (0.1ms)[0m  [1mSELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1[0m  [["number", "COMS W1004"]]
+  Rendered movies/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 8.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 124.123.185.199 at 2021-03-13 14:38:26 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:38:26 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 259ms (Views: 227.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-61a41b033c0f523b767ff4dbb7f541aecfdd592f7c2c3cb4e2021ba91754b279.css?body=1" for 124.123.185.199 at 2021-03-13 14:38:27 +0000
+
+
+Started GET "/movies/1" for 124.123.185.199 at 2021-03-13 14:38:29 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClassdetail Load (0.1ms)[0m  [1mSELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1[0m  [["number", "COMS W1004"]]
+  Rendered movies/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 124.123.185.199 at 2021-03-13 14:41:06 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:41:07 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (170.8ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 217ms (Views: 189.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self-0bf218a5a4bd0865aa8fe175cd5e29fd4e6626200f265cb58d11440a86d97551.css?body=1" for 124.123.185.199 at 2021-03-13 14:41:07 +0000
+
+
+Started GET "/movies/1" for 124.123.185.199 at 2021-03-13 14:41:23 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mClassdetail Load (0.1ms)[0m  [1mSELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1[0m  [["number", "COMS W1004"]]
+  Rendered movies/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:41:27 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 124.123.185.199 at 2021-03-13 14:44:16 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mClassdetail Load (0.1ms)[0m  SELECT  "classdetails".* FROM "classdetails" WHERE "classdetails"."number" = ? LIMIT 1  [["number", "COMS W1004"]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-472a7a53d855f712b0f5b83922cdb749a46aa8d5ca61396d85845db945e1e75e.css?body=1" for 124.123.185.199 at 2021-03-13 14:44:16 +0000
+
+
+Started GET "/movies" for 124.123.185.199 at 2021-03-13 14:44:36 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
