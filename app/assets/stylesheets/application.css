@@ -19,6 +19,14 @@
   opacity: 0.15;
 }
 
-.form-check-input {
+.form-check-inline .form-check-input {
     margin-left: 5px;
+}
+
+.label_name{
+    margin-right: 10px;
+}
+
+#departments_submit {
+    margin-bottom: 10px;
 }

@@ -9,8 +9,6 @@ class MoviesController < ApplicationController
     def index
         @all_departments = Movie.all_departments 
         @all_requirements = Movie.all_requirements
-        @requirements_to_show = Movie.requirements_to_show
-        @department_to_show = Movie.department_to_show
 
         if params.has_key?(:requirements)
             @query_requirements = params[:requirements]
@@ -25,6 +23,8 @@ class MoviesController < ApplicationController
         end
 
         @movies = Movie.filter_by_params(@department, @query_requirements.keys)
+        @requirements_to_show = Movie.requirements_to_show
+        @department_to_show = Movie.department_to_show
     end
 
     def new

@@ -18,7 +18,7 @@ class Movie < ActiveRecord::Base
     end
     
     def self.department_to_show
-        return @requirements_to_show
+        return @department_to_show
     end
 
     def self.filter_by_params(department, requirements)

@@ -21,8 +21,6 @@ movies = [
 
 {:course_num => 'COMS W4995', :dept => 'Computer Science', :course_name => 'Topics in Computer Science: Applied Deep Learning', :professor => 'Joshua B Gordon', :requirement => 'General Technical Elective', :course_time => 'R 7:00pm-9:30pm'},
 
-{:course_num => 'COMS W4995', :dept => 'Computer Science', :course_name => 'Topics in Computer Science: Applied Deep Learning', :professor => 'Joshua B Gordon', :requirement => 'General Technical Elective', :course_time => 'R 7:00pm-9:30pm'},
-
 {:course_num => 'CHEN E4670', :dept => 'Chemical Engineering', :course_name => 'Chemical Engineering Data Analysis', :professor => 'Kyle Bishop', :requirement => 'Major Core', :course_time => 'TTh 10:10pm-12:40pm'},
 
 {:course_num => 'CHEN E4910', :dept => 'Chemical Engineering', :course_name => 'Solid State Chemistry In Pharmecutical', :professor => 'Aaron Moment', :requirement => 'General Technical Elective', :course_time => 'TTh 10:10pm-12:40pm'},    
