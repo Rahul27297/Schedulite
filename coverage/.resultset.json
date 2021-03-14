@@ -11,27 +11,27 @@
           1,
           null,
           1,
-          8,
+          11,
           null,
           null,
           1,
-          8,
+          11,
           null,
           null,
           1,
-          8,
+          11,
           null,
           null,
           1,
-          8,
+          11,
           null,
           null,
           1,
-          8,
-          8,
+          11,
+          11,
           null,
-          8,
-          7,
+          11,
+          10,
           null,
           1,
           null,
@@ -39,35 +39,44 @@
           null
         ]
       },
+      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
-          1,
-          0,
-          0,
-          0,
           null,
           1,
-          8,
-          8,
-          null,
-          8,
+          2,
+          2,
           2,
           null,
-          30,
+          null,
+          1,
+          11,
+          11,
+          null,
+          11,
+          2,
+          null,
+          45,
           null,
           null,
-          8,
+          11,
           3,
           null,
-          5,
+          8,
           null,
           null,
-          8,
-          8,
-          8,
-          8,
-          6,
+          11,
+          11,
+          11,
+          11,
+          9,
+          null,
           null,
           null,
           null
@@ -93,17 +102,115 @@
           1,
           null
         ]
-      },
-      "/home/codio/workspace/Schedulite/app/models/classdetail.rb": {
-        "lines": [
-          0,
-          null,
-          0
-        ],
-        "branches": {
-        }
       }
     },
-    "timestamp": 1615743719
+    "timestamp": 1615762358
+  },
+  "RSpec": {
+    "coverage": {
+      "/home/codio/workspace/Schedulite/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/helpers/movies_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          5,
+          null,
+          null,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/models/course.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1615762377
   }
 }

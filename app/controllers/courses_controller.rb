@@ -1,9 +1,11 @@
 class CoursesController < ApplicationController
+    
     def show
         id = params[:id] # retrieve movie ID from URI route
         @course = Course.find(id) # look up course by unique ID
-        @classdetail = Classdetail.find_by(number: @course.course_num)  
+        @coursedetail = Coursedetails.find_by(number: @course.course_num)  
     end
+    
     def index
         @all_departments = Course.all_departments 
         @all_requirements = Course.all_requirements
@@ -27,4 +29,5 @@ class CoursesController < ApplicationController
             @requirements_to_show = []
         end
     end
+    
 end

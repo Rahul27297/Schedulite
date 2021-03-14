@@ -5,6 +5,12 @@ Given /the following courses exist/ do |courses_table|
   end
 end
 
+Given /the following course details exist/ do |coursedetail_table|
+  coursedetail_table.hashes.each do |coursedetail|
+    Coursedetails.create coursedetail
+  end
+end
+
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.

@@ -14,8 +14,8 @@ module NavigationHelpers
     case page_name
 
     when /^the (Schedulite )?home\s?page$/ then '/courses'
-    when /^the details page for "(.*)"$/
-      course_detail_path(Course.where("id=?", $1).first)
+    when /^course details page for "(.*)"$/
+      course_detail_path(Course.where("course_num=?", $1).first)
     when /^courses page for "(.*)" department$/ then '/courses?department=CS'
     when /^filter courses by "Track Course"$/ then '/courses?requirements[Track Course]=1'
     # Add more mappings here.

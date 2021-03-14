@@ -30,3 +30,23 @@
 #departments_submit {
     margin-bottom: 10px;
 }
+/*
+.btn {
+    transition: width 10s;
+}
+
+.btn:hover{
+  width: 110%;
+}
+
+.title {
+  animation-name: example; 
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  from {background-color: #78aee8;}
+  to {background-color: #5e86b1;}
+}
+
+*/
