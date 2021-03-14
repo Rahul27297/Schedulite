@@ -1,7 +1,7 @@
 
 Given /the following courses exist/ do |courses_table|
   courses_table.hashes.each do |course|
-    Movie.create course
+    Course.create course
   end
 end
 
@@ -19,12 +19,12 @@ end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  Movie.all.each do |movie|
+  Course.all.each do |movie|
     step %{I should see "#{movie.title}"}
   end
 end
 
 Then /the director of "(.*)" should be "(.*)"/ do |movie, director|
-  movie = Movie.find_by_title(movie)
+  movie = Course.find_by_title(movie)
   expect(movie.director).to eq director
 end
