@@ -252,3 +252,7 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+When /^(?:|I )select option "(.*)" from "(.*)"$/ do |option, selector|
+    all(selector).last.find(:option, option).select_option
+end

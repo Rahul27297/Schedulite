@@ -13,7 +13,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (RottenPotatoes )?home\s?page$/ then '/movies'
+    when /^the (Schedulite )?home\s?page$/ then '/movies'
     when /^the edit page for "(.*)"$/
       edit_movie_path(Movie.where("title = ?", $1).first)
     when /^the details page for "(.*)"$/
@@ -21,6 +21,8 @@ module NavigationHelpers
     when /^the Similar Movies page for "(.*)"$/
       director_movies_path(Movie.where("title=?", $1).first)
     when /^the Add new movie page$/ then new_movie_path
+    when /^courses page for "(.*)" department$/ then '/movies?department=CS'
+    when /^filter courses by "Track Course"$/ then '/movies?requirements[Track Course]=1'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

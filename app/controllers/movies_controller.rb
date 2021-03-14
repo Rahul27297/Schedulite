@@ -25,6 +25,9 @@ class MoviesController < ApplicationController
         @movies = Movie.filter_by_params(@department, @query_requirements.keys)
         @requirements_to_show = Movie.requirements_to_show
         @department_to_show = Movie.department_to_show
+        if !(params.has_key?(:requirements))
+            @requirements_to_show = []
+        end
     end
 
     def new

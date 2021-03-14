@@ -3773,3 +3773,169 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (1.3ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:17:12 +0000
+
+
+Started GET "/movies" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:17:12 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 353ms (Views: 305.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=Computer+Science&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:17:17 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"Computer Science", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."dept" = ? AND "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')  [["dept", "Computer Science"]]
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?department=Computer+Science&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:17:25 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"department"=>"Computer Science", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."dept" = ? AND "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m  [["dept", "Computer Science"]]
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?department=Computer+Science" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:17:33 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"department"=>"Computer Science"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."dept" = ? AND "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')  [["dept", "Computer Science"]]
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:57:32 +0000
+
+
+Started GET "/movies" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:57:32 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 268ms (Views: 237.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 04:57:37 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:10:55 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (11.3ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 227ms (Views: 195.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:13:49 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective')[0m
+  Rendered movies/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 302ms (Views: 255.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:13:57 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:14:08 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:14:14 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective')
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:14:19 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:59:14 +0000
+
+
+Started GET "/movies" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:59:14 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 207ms (Views: 188.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:59:18 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."requirement" = 'Major Core'
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:59:22 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement')[0m
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:59:27 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective')
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 05:59:31 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&department=All&requirements%5BMajor+Core%5D=1&requirements%5BGeneral+Technical+Requirement%5D=1&requirements%5BGeneral+Technical+Elective%5D=1&requirements%5BTrack+Course%5D=1&commit=Refresh" for 2603:7000:9a40:bf:eda3:da60:5b29:50d0 at 2021-03-14 06:05:06 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Requirement"=>"1", "General Technical Elective"=>"1", "Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered movies/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 234ms (Views: 202.7ms | ActiveRecord: 2.1ms)

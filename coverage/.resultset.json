@@ -1,0 +1,159 @@
+{
+  "Cucumber Features": {
+    "coverage": {
+      "/home/codio/workspace/rottenpotatoes/app/models/movie.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          10,
+          null,
+          null,
+          1,
+          10,
+          10,
+          null,
+          10,
+          8,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/rottenpotatoes/app/controllers/movies_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          10,
+          10,
+          null,
+          10,
+          2,
+          null,
+          40,
+          null,
+          null,
+          10,
+          4,
+          null,
+          6,
+          null,
+          null,
+          10,
+          10,
+          10,
+          10,
+          8,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/rottenpotatoes/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/rottenpotatoes/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/rottenpotatoes/app/helpers/movies_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/rottenpotatoes/app/models/classdetail.rb": {
+        "lines": [
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1615704039
+  }
+}

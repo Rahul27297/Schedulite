@@ -24,6 +24,7 @@ class Movie < ActiveRecord::Base
     def self.filter_by_params(department, requirements)
         @requirements_to_show = requirements
         @department_to_show = department
+        
         if department == "All"
             Movie.where({requirement: requirements})
         else

@@ -195,6 +195,7 @@ DEPENDENCIES
   ZenTest (= 4.11.2)
   byebug
   capybara (= 2.4.4)
+  cucumber
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner (= 1.4.1)

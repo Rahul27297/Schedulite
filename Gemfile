@@ -3,6 +3,7 @@ source :rubygems
 ruby '>= 2.6.6', '< 2.7.0'
 gem 'rails', '4.2.10'
 gem 'rerun'
+gem 'cucumber'
 
 # for Heroku deployment 
 group :development, :test do
