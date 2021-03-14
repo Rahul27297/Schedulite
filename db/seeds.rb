@@ -1,12 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 
-movies = [
+courses = [
 
 {:course_num => 'COMS W1004', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm'},
 
@@ -33,8 +26,8 @@ classdetails = [
     {:number => 'COMS W4995', :detail => 'Computer Science.....'}
     ]
 
-movies.each do |movie|
-  Movie.create!(movie)
+courses.each do |course|
+  Course.create!(course)
 end
 
 classdetails.each do |cdetail|

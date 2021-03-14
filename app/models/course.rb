@@ -1,4 +1,4 @@
-class Movie < ActiveRecord::Base
+class Course < ActiveRecord::Base
   
     @@all_departments = ['All', 'Computer Science', 'Chemical Engineering']
     @@all_requirements = ['Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course']
@@ -26,9 +26,9 @@ class Movie < ActiveRecord::Base
         @department_to_show = department
         
         if department == "All"
-            Movie.where({requirement: requirements})
+            Course.where({requirement: requirements})
         else
-            Movie.where({dept: department, requirement: requirements})
+            Course.where({dept: department, requirement: requirements})
         end
     end
 end

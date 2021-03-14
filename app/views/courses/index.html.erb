@@ -1,6 +1,6 @@
 <!--  This file is app/views/movies/index.html.erb -->
 
-<%= form_tag movies_path, method: :get, id: 'departments_form' do %>
+<%= form_tag courses_path, method: :get, id: 'departments_form' do %>
     <div class="row">
         <div class="col-6">
             <h2 >Fall 2021 Courses</h2>
@@ -45,31 +45,30 @@
     </tr>
   </thead>
   <tbody>
-    <% @movies.each do |movie| %>
+    <% @courses.each do |course| %>
       <tr>
         <td>
-          <%= movie.course_num %>
+          <%= course.course_num %>
         </td>
         <td>
-          <%= movie.dept %>
+          <%= course.dept %>
         </td>
         <td>
-          <%= movie.course_name %>
+          <%= course.course_name %>
         </td>
         <td>
-          <%= movie.professor %>
+          <%= course.professor %>
         </td>
 	<td>
-	  <%= movie.requirement%>
+	  <%= course.requirement%>
 	</td>
         <td>
-	  <%= movie.course_time%>
+	  <%= course.course_time%>
 	</td>
     <td>
-      <%= link_to "More about #{movie.course_name}", movie_path(movie) %>
+      <%= link_to "More about #{course.course_name}", course_detail_path(course) %>
     </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary' %>
