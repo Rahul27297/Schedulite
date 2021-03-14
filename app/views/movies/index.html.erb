@@ -1,0 +1,67 @@
+<!--  This file is app/views/movies/index.html.erb -->
+<h2>Fall 2021 Courses</h2>
+
+<%= form_tag movies_path, method: :get, id: 'departments_form' do %>
+    <div class=row>
+        Department: 
+        <select name="department">
+            <%= options_for_select(@all_departments, selected: @department_to_show) %>
+        </select>
+    </div>
+
+    <div class=row>
+        Requirement:
+        <% @all_requirements.each do |requirement| %>
+        <div class="form-check  form-check-inline">
+          <%= label_tag "requirements[#{requirement}]", requirement, class: 'form-check-label' %>
+          <%= check_box_tag "requirements[#{requirement}]", "1",  @requirements_to_show.include?(requirement), class: 'form-check-input', id: "requirements_#{requirement}"%>
+        </div>
+      <% end %>
+    </div>
+
+    <div class=row>
+        <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-primary' %>
+    </div>
+<% end %>
+
+<table class="table table-striped col-md-12" id="movies">
+  <thead>
+    <tr>
+      <th>Course Number</th>
+      <th>Department</th>
+      <th>Course Name</th>
+      <th>Professor</th>
+      <th>Requirement</th>
+      <th>Course Day/Time</th>
+      <th>More About</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+      <tr>
+        <td>
+          <%= movie.course_num %>
+        </td>
+        <td>
+          <%= movie.dept %>
+        </td>
+        <td>
+          <%= movie.course_name %>
+        </td>
+        <td>
+          <%= movie.professor %>
+        </td>
+	<td>
+	  <%= movie.requirement%>
+	</td>
+        <td>
+	  <%= movie.course_time%>
+	</td>
+    <td>
+      <%= link_to "More about #{movie.course_name}", movie_path(movie) %>
+    </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary' %>
