@@ -7,7 +7,7 @@ gem 'cucumber'
 
 # for Heroku deployment 
 group :development, :test do
-  gem 'sqlite3', '1.3.11'
+  gem 'pg'
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'
