@@ -1,5 +1,9 @@
 <!--  This file is app/views/movies/index.html.erb -->
-
+<% if flash[:message] %>
+   <div class="alert alert-danger">
+     <span class="error"><%= flash[:message] %></span>
+   </div>
+<% end %>
 <%= form_tag courses_path, method: :get, id: 'departments_form' do %>
     <div class="row">
         <div class="col-6">
@@ -32,6 +36,12 @@
     </div>
 <% end %>
 
+<%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
+<div class="row" style = "top: 166px; position: absolute; right: 77px;">
+        <div class="col-12">
+            <%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-primary' %>
+        </div>
+</div>
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
@@ -42,7 +52,9 @@
       <th>Requirement</th>
       <th>Course Day/Time</th>
       <th>More About</th>
+      <th>Cart</th>  
     </tr>
+      
   </thead>
   <tbody>
     <% @courses.each do |course| %>
@@ -68,7 +80,14 @@
     <td>
       <%= link_to "More about #{course.course_name}", course_detail_path(course) %>
     </td>
+    <td>
+      <div class="form-check  form-check-inline">
+          <%= label_tag "addCart[#{course.course_num}]", "", class: 'form-check-label' %>
+          <%= check_box_tag "addCart[#{course.course_num}]", "1", @addCart.include?(course.course_num), class: 'form-check-input', id: "addCart[#{course.course_num}]"%>
+      </div>  
+    </td>      
       </tr>
     <% end %>
   </tbody>
 </table>
+<% end %>
