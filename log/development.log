@@ -8825,3 +8825,334 @@ Processing by CoursesController#index as HTML
   Rendered courses/index.html.erb within layouts/application (1.8ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 49.206.49.99 at 2021-03-28 20:38:23 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 20:38:23 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 275ms (Views: 268.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 20:38:39 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YP61j3SZ9VUFVLAlp9xWQHWoALtK1H/ILIYxkLwY20ld+2lN/LDB8IH2cW4jVgE3AQpwJJp+VKNgOLnMYTgNjQ==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "CHEN E4670"=>"1", "CHEN E4910"=>"1"}}
+  [1m[35mSQL (100.8ms)[0m  DELETE FROM "carts"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W1004"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W1004"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[35m (121.1ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W3134"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W3134"], ["course_time", "MW 5:40pm-6:55pm"]]
+  [1m[35m (100.1ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W4771"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W4771"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[35m (104.0ms)[0m  commit transaction
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "CHEN E4670"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "CHEN E4670"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[35m (110.0ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "CHEN E4910"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "CHEN E4910"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[35m (103.5ms)[0m  commit transaction
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 658ms (Views: 5.4ms | ActiveRecord: 641.5ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 20:38:57 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 20:39:04 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uLwlqbgE4b7kxfgaVhgejeZwKDBA9ISvUW/0gaq7QtKFuflrMC3VG2BnOVHSkkn6ktJYr5Ber8Qd0Xzdd5uUFg==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "CHEN E4910"=>"1"}}
+  [1m[36mSQL (109.9ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W1004"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W1004"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[36m (113.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W3134"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W3134"], ["course_time", "MW 5:40pm-6:55pm"]]
+  [1m[36m (103.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W4771"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W4771"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (101.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "CHEN E4910"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "CHEN E4910"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[36m (109.2ms)[0m  [1mcommit transaction[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 551ms (Views: 4.8ms | ActiveRecord: 539.2ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 20:39:09 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 20:39:15 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P8NP8fg0I9Ifm+jNQB/9dae6bijT8fZlVNrTJPK3rT4CxpMzcB0Xd5s5KYbElaoC0xgetwNb3Q4YZFt4L5d7+g==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "CHEN E4910"=>"1"}}
+  [1m[35mSQL (98.9ms)[0m  DELETE FROM "carts"
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W1004"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W1004"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[35m (111.7ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W3134"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W3134"], ["course_time", "MW 5:40pm-6:55pm"]]
+  [1m[35m (97.6ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W4771"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W4771"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[35m (104.4ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "CHEN E4910"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "CHEN E4910"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[35m (106.8ms)[0m  commit transaction
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 532ms (Views: 4.8ms | ActiveRecord: 520.6ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 20:39:18 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 49.206.49.99 at 2021-03-28 20:55:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 20:55:22 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 206ms (Views: 196.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/courses/1" for 49.206.49.99 at 2021-03-28 20:55:29 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCoursedetails Load (0.1ms)[0m  [1mSELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = ? LIMIT 1[0m  [["number", "COMS W1004"]]
+  [1m[35mCourseFaq Load (0.1ms)[0m  SELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = ?  [["course_number", "COMS W1004"]]
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 49.206.49.99 at 2021-03-28 21:02:10 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 21:02:10 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 247ms (Views: 235.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 49.206.49.99 at 2021-03-28 21:23:33 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 21:23:33 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 132ms (Views: 125.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/courses/2" for 49.206.49.99 at 2021-03-28 21:23:52 +0000
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCoursedetails Load (5.0ms)[0m  [1mSELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = ? LIMIT 1[0m  [["number", "COMS W3107"]]
+  [1m[35mCourseFaq Load (3.1ms)[0m  SELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = ?  [["course_number", "COMS W3107"]]
+  Rendered courses/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 5.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 21:24:07 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 21:24:15 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1q+a/9KXjsLHPs4QzEybr8rB/6Tm4+HK6a5Gj0d0akPrqkY9Wr66Z0OcD1tIxszYvmOPOzZJyqGlEM7TmlS8hw==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "CHEN E4910"=>"1"}}
+  [1m[36mSQL (110.4ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W1004"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W1004"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[36m (111.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W3134"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W3134"], ["course_time", "MW 5:40pm-6:55pm"]]
+  [1m[36m (99.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W4771"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W4771"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (109.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "CHEN E4910"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "CHEN E4910"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[36m (103.7ms)[0m  [1mcommit transaction[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 552ms (Views: 5.5ms | ActiveRecord: 538.5ms)
+
+
+Started GET "/" for 49.206.49.99 at 2021-03-28 21:35:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 21:35:06 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 191ms (Views: 184.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 21:35:11 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GZOfRnw4RxGtNgiz00OKrBmGXvvJ4wBH6dZQ8lskgloklkOE9BFztCmUyfhXyd3bbSQuZBlJKyylaNiuhgRUng==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "CHEN E4910"=>"1"}}
+  [1m[35mSQL (99.5ms)[0m  DELETE FROM "carts"
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W1004"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W1004"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W3134"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W3134"], ["course_time", "MW 5:40pm-6:55pm"]]
+  [1m[35m (103.7ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "COMS W4771"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "COMS W4771"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[35m (90.5ms)[0m  commit transaction
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1[0m  [["course_num", "CHEN E4910"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)[0m  [["user_id", "1"], ["course_number", "CHEN E4910"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[35m (103.1ms)[0m  commit transaction
+  Rendered courses/add_to_cart.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 524ms (Views: 8.9ms | ActiveRecord: 507.0ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 21:35:19 +0000
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 21:35:23 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"shYU0+CGdvIy4Wi+MOdX1Gfm/DOuYbD5Ec19FXoztd2PE8gRaK9CV7ZDqfW0bQCjE0SMrH7Lm5Jdc/VJpxNjGQ==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "CHEN E4910"=>"1"}}
+  [1m[36mSQL (105.8ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W1004"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W1004"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[36m (106.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W3134"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W3134"], ["course_time", "MW 5:40pm-6:55pm"]]
+  [1m[36m (106.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "COMS W4771"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "COMS W4771"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (103.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = ? LIMIT 1  [["course_num", "CHEN E4910"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES (?, ?, ?)  [["user_id", "1"], ["course_number", "CHEN E4910"], ["course_time", "TTh 10:10pm-12:40pm"]]
+  [1m[36m (101.4ms)[0m  [1mcommit transaction[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 537ms (Views: 5.9ms | ActiveRecord: 524.9ms)
+
+
+Started GET "/" for 49.206.49.99 at 2021-03-28 22:26:43 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 22:26:43 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 210ms (Views: 203.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 22:26:55 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8XmV4/ECI89yqVX+9Xhijgi8w/pWUKzUToM1qXBoaSmwDqVB+08KrloZBx/X7b9TICDkDnzadgdhISKeOF3YA==", "commit"=>"Add To Cart"}
+Redirected to https://define-loyal-3000.codio.io/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 22:26:56 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/courses/addcart" for 49.206.49.99 at 2021-03-28 22:27:10 +0000
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdGrcp04660M1dmXcCGqPf9KmtIJEtVAv46Y+d/g8htY1HewFRHfCIh3GNz0q/1Ki+jqTdm4/ivzMBClAsAk3w==", "commit"=>"Add To Cart", "addCart"=>{"COMS W1004"=>"1", "COMS W3107"=>"1", "COMS W3134"=>"1", "COMS W4771"=>"1", "COMS W4995"=>"1", "CHEN E4670"=>"1", "CHEN E4910"=>"1"}}
+Redirected to https://define-loyal-3000.codio.io/courses
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/courses" for 49.206.49.99 at 2021-03-28 22:27:11 +0000
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = ?  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms)
