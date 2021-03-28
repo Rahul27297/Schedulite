@@ -82,6 +82,7 @@
         </div>
         <div class="card-body">
           <input type="text" name="inputQuestion" class="form-control" id="inputQuestion" placeholder="Post a question" style="margin-bottom: 10px;">
+          <input type="hidden" name="inputCourse" class="form-control" id="inputCourse" value='<%= @coursedetail.number%>'>
           <%= submit_tag 'Post', id: 'questions_submit', class: 'btn btn-primary' %>
         </div>
       <% end %>

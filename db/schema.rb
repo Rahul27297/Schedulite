@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20210325212953) do
     t.datetime "updated_at",      null: false
   end
 
+  # TODO delete this table. Not being used.
   create_table "course_faq_questions", force: :cascade do |t|
     t.integer  "number"
     t.string   "course_number"

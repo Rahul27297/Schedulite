@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/codio/workspace/Schedulite/app/models/course.rb": {
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -11,27 +11,27 @@
           1,
           null,
           1,
-          11,
+          13,
           null,
           null,
           1,
-          11,
+          13,
           null,
           null,
           1,
-          11,
+          13,
           null,
           null,
           1,
-          11,
+          13,
           null,
           null,
           1,
-          11,
-          11,
+          13,
+          13,
           null,
-          11,
-          10,
+          13,
+          12,
           null,
           1,
           null,
@@ -39,50 +39,89 @@
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/models/coursedetails.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/models/course_faq.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          2,
-          2,
-          2,
+          6,
+          6,
+          6,
+          6,
           null,
           null,
           1,
-          11,
-          11,
+          6,
+          6,
+          6,
+          6,
+          5,
+          5,
+          5,
+          5,
+          4,
           null,
-          11,
+          5,
+          5,
+          null,
+          null,
+          null,
+          1,
+          13,
+          13,
+          null,
+          13,
           2,
           null,
-          45,
+          55,
           null,
           null,
-          11,
+          13,
           3,
           null,
-          8,
+          10,
           null,
           null,
+          13,
+          13,
+          13,
+          13,
           11,
-          11,
-          11,
-          11,
-          9,
           null,
           null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/controllers/application_controller.rb": {
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -91,20 +130,26 @@
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/helpers/application_helper.rb": {
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/helpers/movies_helper.rb": {
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/helpers/movies_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/prodigy/Desktop/Spring 21/ASE/Schedulite/app/models/course_faq_an.rb": {
         "lines": [
           1,
           null
         ]
       }
     },
-    "timestamp": 1615762358
+    "timestamp": 1616965293
   },
   "RSpec": {
     "coverage": {

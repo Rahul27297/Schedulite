@@ -50,8 +50,9 @@ class CoursesController < ApplicationController
     def add_faq
         id = params[:id]
         question = params[:inputQuestion]
-        @course = Course.find(id)
-        course_faq = CourseFaq.create(course_number: @course.course_num, question: question)
+        course_num = params[:inputCourse]
+        @course = Course.find_by(course_num: course_num)
+        course_faq = CourseFaq.create(course_number: course_num, question: question)
         faqs = CourseFaq.all
         redirect_to course_detail_path(@course)
     end
