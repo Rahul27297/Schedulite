@@ -1,37 +1,92 @@
-<!--  This file is app/views/movies/show.html.erb -->
-<h2>Details about <em><%= @coursedetail.number %></em></h2>
-<h1 ><%= image_tag("columbia-university-logo.jpg", :alt => "logo", :class => "logo_image") %></h1>
+<!--  app/views/movies/show.html.erb -->
 
-<ul id="details">
-  <li>
-    Number:
-    <%= @coursedetail.number %>
-  </li>
-  <li>
-    Instructor:
-    <%= @course.professor %>
-  </li>
-  <li>
-    Course Name:
-    <%= @course.course_name %>
-  </li>  
-  <li>
-    Type:
-    <%= @coursedetail.coursetype %>
-  </li>
-  <li>
-    Points:
-    <%= @coursedetail.points %>
-  </li> 
-  <li>
-    Method of Instruction:
-    <%= @coursedetail.method_of_inst %>
-  </li>  
-  <li>
-    Details:
-    <%= @coursedetail.detail %>
-  </li>
-</ul>
-<div class="row">
-  <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-primary' %>
-</div>
+  <div class = "row">
+    <div class = "col-6">
+      <h2>Details about <em><%= @coursedetail.number %></em></h2>
+    </div>
+    <div class = "col-6">
+      <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-primary float-right' %>
+    </div>
+  </div>
+
+  <div>
+    <ul id="details" class="list-group">
+      <li class="list-group-item">
+        <label class="font-weight-bold"> Number: </label>
+        <%= @coursedetail.number %>
+      </li>
+      <li class="list-group-item">
+      <label class="font-weight-bold"> Instructor: </label>
+        <%= @course.professor %>
+      </li>
+      <li class="list-group-item">
+      <label class="font-weight-bold"> Course Name: </label>
+        <%= @course.course_name %>
+      </li>  
+      <li class="list-group-item">
+      <label class="font-weight-bold"> Type: </label>
+        <%= @coursedetail.coursetype %>
+      </li>
+      <li class="list-group-item">
+      <label class="font-weight-bold"> Points: </label>
+        <%= @coursedetail.points %>
+      </li> 
+      <li class="list-group-item">
+      <label class="font-weight-bold"> Method of Instruction: </label>
+        <%= @coursedetail.method_of_inst %>
+      </li>  
+      <li class="list-group-item">
+      <label class="font-weight-bold"> Details: </label>
+        <%= @coursedetail.detail %>
+      </li>
+    </ul>
+  </div>
+  <br><br>
+
+  <h2>FAQs</h2>
+
+  <br>
+
+  <% @all_questions.each do |q| %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"> <%= q["question"] %> </h5>
+        <% if q["answer"].empty? %>
+          <%= form_tag course_ans_path, method: :post, id: 'answer_form' do %>
+            <div class = "row form-group">
+              <div class = "col-12">
+                <input type="text" name="inputAnswer" class="form-control" id="inputAnswer" placeholder="Your answer here">
+                <input type="hidden" name="inputQuestionId" value=<%= q["id"]%> >
+                <input type="hidden" name="course_number" value='<%= q["course_number"]%>' >
+              </div>
+            </div>
+            <div class = "row">
+              <div class = "col-12">
+                <%= submit_tag 'Answer', id: 'answer_submit', class: 'btn btn-primary' %>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <p class="card-text"> <%= q["answer"][0]["answer"] %></p>
+        <% end %>
+      </div>
+    </div>
+    <br>
+  <% end %> 
+
+
+    <div class="card">
+      <%= form_tag course_faq_path(@coursedetail), method: :post, id: 'questions_form' do %>
+        <div class="card-header text-white bg-primary">
+          Post a Question to instructors
+        </div>
+        <div class="card-body">
+          <input type="text" name="inputQuestion" class="form-control" id="inputQuestion" placeholder="Post a question" style="margin-bottom: 10px;">
+          <%= submit_tag 'Post', id: 'questions_submit', class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+
+    <br>
+    <br>
+    <br>
