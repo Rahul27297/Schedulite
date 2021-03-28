@@ -1,0 +1,46 @@
+<!--  app/views/courses/add_to_cart.html.erb -->
+<% if flash[:colormessage] %>
+   <div class="alert alert-danger">
+     <span class="error"><%= flash[:colormessage] %></span>
+   </div>
+<% end %>
+  <div class = "row">
+    <div class = "col-6">
+      <h2>Cart Details</h2>
+    </div>
+    <div class = "col-6">
+      <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-primary float-right' %>
+    </div>
+  </div>
+
+  <div>
+    <ul id="details" class="list-group">
+       <% color_array = ["B", "Y", "R"] %>
+       <% color = "" %>
+       <% color_to_timing = {} %> 
+       <% @cartDetails.each do |detail| %>  
+      <li class="list-group-item">
+        <label class="font-weight-bold", style = "float: left; width: 45%;"> Number: <%= detail[:course_number] %></label>
+        <label class="font-weight-bold" style = "float: left; width: 45%;"> Time: <%= detail[:course_time] %></label>
+        <% if @overlap.include?(detail[:course_time])
+               if color_to_timing[detail[:course_time]] != nil
+                   color = color_to_timing[detail[:course_time]]
+               else
+                   color = color_array.pop()
+                   color_to_timing[detail[:course_time]] = color
+               end
+        %>
+        <% end %> 
+        <% if color == "R" %> 
+        <span style = "color: red; font-family: Material Icons; font-size: xx-large; float: right; height: 30px;">&#9888;</span>
+        <% end %> 
+        <% if color == "Y" %> 
+        <span style = "color: yellow; font-family: Material Icons; font-size: xx-large; float: right; height: 30px;">&#9888;</span>
+        <% end %> 
+        <% if color == "B" %> 
+        <span style = "color: blue; font-family: Material Icons; font-size: xx-large; float: right; height: 30px;">&#9888;</span>
+        <% end %>  
+      </li>
+      <% end %>   
+    </ul>
+  </div>

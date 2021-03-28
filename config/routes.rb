@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get    '/courses/:id(.:format)' => 'courses#show', as: :course_detail
   post   '/course/ans/:id(.:format)' => 'courses#add_ans', as: :course_ans
   post   '/course/faq/:id(.:format)' => 'courses#add_faq', as: :course_faq
+  post   '/courses/addcart(.:format)' => 'courses#add_to_cart', as: :courses_add_cart
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

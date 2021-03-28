@@ -45,6 +45,13 @@ class CoursesController < ApplicationController
         if !(params.has_key?(:requirements))
             @requirements_to_show = []
         end
+        @addCart = []
+        in_cart = Cart.where({user_id: "1"})
+        if in_cart != nil
+            in_cart.each do |each_course|
+                @addCart << each_course.course_number
+            end
+        end
     end
     
     def add_faq
@@ -61,5 +68,35 @@ class CoursesController < ApplicationController
         ans = CourseFaqAn.all
         @course = Course.find_by(course_num: params[:course_number])
         redirect_to course_detail_path(@course)
+    end
+    
+     def add_to_cart
+        @overlap = []
+        @cartDetails = [] 
+        course_time_array = [] 
+        if params[:addCart] != nil
+            if params[:addCart].size < 7
+                cart = params[:addCart]
+                Cart.delete_all
+                cart.each do |each_course|
+                    course = Course.find_by(course_num: each_course[0])
+                    Cart.create(user_id: "1", course_number: course.course_num, course_time: course.course_time)
+                    @cartDetails << {user_id: "1", course_number: course.course_num, course_time: course.course_time}
+                    if course_time_array.include?(course.course_time)
+                        @overlap << course.course_time
+                        flash[:colormessage] = "There is an overlap between courses indicated by warning symbols. Please go back to course listing page and remove the courses from the cart."
+                    else
+                        course_time_array << course.course_time
+                    end
+                end
+                return
+            else
+                flash[:message] = "Cart size is cannot be greater than 6. Please limit the courses."
+            end
+        else
+           flash[:message] = "Nothing to add."
+        end    
+        redirect_to courses_path 
+        return
     end
 end
