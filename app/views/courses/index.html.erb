@@ -34,6 +34,13 @@
             <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-primary' %>
         </div>
     </div>
+
+    <div class="row">
+         <div class="col-12">
+         	<%= link_to "Add Previously Taken Courses", prevcoursesform_url %>
+ 	</div>
+     </div>
+
 <% end %>
 
 <%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
