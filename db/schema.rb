@@ -24,14 +24,6 @@ ActiveRecord::Schema.define(version: 20210325212953) do
     t.datetime "updated_at",      null: false
   end
 
-  create_table "course_faq_questions", force: :cascade do |t|
-    t.integer  "number"
-    t.string   "course_number"
-    t.text     "question"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "course_faqs", force: :cascade do |t|
     t.integer  "number"
     t.text     "question"

@@ -22,8 +22,31 @@ class CoursesController < ApplicationController
             @all_questions.append(question_ans)
         end
     end
-    
-    def index
+
+    def prevcoursesform
+	@courses = Course.all
+        if params.has_key?(:courses)
+            @query_courses = params[:courses]
+        else
+            @query_courses = Hash[@courses.map {|x| [x, 1]}]
+        end
+        
+        @courses = Course.filter_by_params(@department, @query_courses.keys)
+        if !(params.has_key?(:requirements))
+        	@courses = Course.all
+	end
+
+    end
+
+def updatedcourses
+	@requirements_to_show = Course.all_requirements
+	@all_departments = Course.all_departments
+	@all_requirements = Course.all_requirements
+	@courses = Course.all
+	# flash[:warning] = "#{params[:show_course]}"
+end
+
+def index
         @all_departments = Course.all_departments 
         @all_requirements = Course.all_requirements
 

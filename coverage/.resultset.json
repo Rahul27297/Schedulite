@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/codio/workspace/Schedulite/app/models/course.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -11,78 +11,133 @@
           1,
           null,
           1,
-          11,
+          14,
           null,
           null,
           1,
-          11,
+          15,
           null,
           null,
           1,
-          11,
+          13,
           null,
           null,
           1,
-          11,
+          13,
           null,
           null,
           1,
-          11,
-          11,
+          15,
+          15,
           null,
-          11,
-          10,
+          15,
+          12,
           null,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          11,
-          11,
-          null,
-          11,
-          2,
-          null,
-          45,
-          null,
-          null,
-          11,
           3,
           null,
-          8,
-          null,
-          null,
-          11,
-          11,
-          11,
-          11,
-          9,
-          null,
-          null,
           null,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/controllers/application_controller.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/coursedetails.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/controllers/courses_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          0,
+          null,
+          6,
+          null,
+          null,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          13,
+          13,
+          null,
+          13,
+          2,
+          null,
+          55,
+          null,
+          null,
+          13,
+          3,
+          null,
+          10,
+          null,
+          null,
+          13,
+          13,
+          13,
+          13,
+          11,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -91,43 +146,137 @@
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/helpers/application_helper.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/helpers/movies_helper.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/course_faq.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/course_faq_an.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/prev_courses_form.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1615762358
+    "timestamp": 1616983501
   },
   "RSpec": {
     "coverage": {
-      "/home/codio/workspace/Schedulite/app/helpers/application_helper.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/helpers/movies_helper.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
           1,
           1,
           1,
+          0,
+          0,
+          null,
+          null,
           1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
           null,
           null,
           1,
@@ -154,10 +303,25 @@
           null,
           null,
           null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/controllers/application_controller.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -166,7 +330,19 @@
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/models/course.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/course_faq_an.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/course_faq.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -204,13 +380,53 @@
           null
         ]
       },
-      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/coursedetails.rb": {
         "lines": [
           1,
           null
         ]
+      },
+      "/Users/janelleponnor/Desktop/Schedulite_Recent/app/models/prev_courses_form.rb": {
+        "lines": [
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1615762377
+    "timestamp": 1616985633
   }
 }
