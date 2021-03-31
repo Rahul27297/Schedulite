@@ -40,9 +40,13 @@ class CoursesController < ApplicationController
 
     def updatedcourses
  	@requirements_to_show = Course.all_requirements
- 	@all_departments = Course.all_departments
+	@all_departments = Course.all_departments
  	@all_requirements = Course.all_requirements
  	@courses = Course.all
+	@addCart = []
+	@courses.each do |each_course|
+		@addCart << each_course.course_num
+	end
  	# flash[:warning] = "#{params[:show_course]}"
     end  
     
