@@ -23,6 +23,22 @@ class CoursesController < ApplicationController
         end
     end
 
+    def gather_faqs(course)
+        course_num = course.course_num
+        @questions = CourseFaq.where({course_number: course_num})
+        @all_questions = []
+        @questions.each do |question|
+            answer = []
+            ans = CourseFaqAn.all
+            answer = CourseFaqAn.where({course_number: course_num, question_number: question.id})
+            if answer.empty?
+                answer = []
+            end
+            question_ans = {"id" => question.id, "course_number" => course_num, "question" => question.question, "answer" => answer}
+            @all_questions.append(question_ans)
+        end
+    end
+
     def prevcoursesform
  	@courses = Course.all
          if params.has_key?(:courses)
@@ -84,8 +100,9 @@ class CoursesController < ApplicationController
     def add_faq
         id = params[:id]
         question = params[:inputQuestion]
-        @course = Course.find(id)
-        course_faq = CourseFaq.create(course_number: @course.course_num, question: question)
+        course_num = params[:inputCourse]
+        @course = Course.find_by(course_num: course_num)
+        course_faq = CourseFaq.create(course_number: course_num, question: question)
         faqs = CourseFaq.all
         redirect_to course_detail_path(@course)
     end
@@ -127,3 +144,4 @@ class CoursesController < ApplicationController
         return
     end
 end
+

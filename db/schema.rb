@@ -11,6 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20210325212953) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+=======
 ActiveRecord::Schema.define(version: 20210327171633) do
 
   create_table "carts", force: :cascade do |t|
@@ -18,6 +24,7 @@ ActiveRecord::Schema.define(version: 20210327171633) do
     t.string "course_number"
     t.string "course_time"
   end
+>>>>>>> 4f4a885d7415c17edbed99662bc24051ff0ef1ed
 
   create_table "course_faq_ans", force: :cascade do |t|
     t.integer  "question_number"
