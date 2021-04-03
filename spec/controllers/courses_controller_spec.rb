@@ -96,4 +96,19 @@ describe 'POST#add_ans' do
   end 
 end
 
+
+ describe 'GET#prevcoursesform' do
+    it 'returns a succes response' do
+      get :prevcoursesform
+      expect(response).to be_success
+    end
+  end
+
+describe 'GET#updatedcourses' do
+    it 'returns a succes response' do
+      get :updatedcourses
+      expect(response).to be_success
+    end
+  end
+    
 end

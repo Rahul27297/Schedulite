@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     
   # map '/' to be a redirect to '/movies'
   root :to => redirect('/courses')
-  match '/prevcoursesform', to: 'courses#prevcoursesform', via: :all
+  get    '/prevcoursesform' => 'courses#prevcoursesform', via: :all
   get    '/updatedcourses(.:format)' => 'courses#updatedcourses', as: :updatedcourses
   get    '/courses(.:format)' => 'courses#index', as: :courses
   get    '/courses/:id(.:format)' => 'courses#show', as: :course_detail

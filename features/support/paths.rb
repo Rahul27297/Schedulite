@@ -13,6 +13,7 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+    when /^the (previously taken courses )?page$/ then '/prevcoursesform'
     when /^the (updated Schedulite )?home\s?page$/ then '/updatedcourses'
     when /^the (Schedulite )?home\s?page$/ then '/courses'
     when /^course details page for "(.*)"$/
