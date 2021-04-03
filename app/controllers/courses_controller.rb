@@ -22,6 +22,49 @@ class CoursesController < ApplicationController
             @all_questions.append(question_ans)
         end
     end
+
+    def gather_faqs(course)
+        course_num = course.course_num
+        @questions = CourseFaq.where({course_number: course_num})
+        @all_questions = []
+        @questions.each do |question|
+            answer = []
+            ans = CourseFaqAn.all
+            answer = CourseFaqAn.where({course_number: course_num, question_number: question.id})
+            if answer.empty?
+                answer = []
+            end
+            question_ans = {"id" => question.id, "course_number" => course_num, "question" => question.question, "answer" => answer}
+            @all_questions.append(question_ans)
+        end
+    end
+
+    def prevcoursesform
+ 	@courses = Course.all
+         if params.has_key?(:courses)
+             @query_courses = params[:courses]
+         else
+             @query_courses = Hash[@courses.map {|x| [x, 1]}]
+         end
+
+         @courses = Course.filter_by_params(@department, @query_courses.keys)
+         if !(params.has_key?(:requirements))
+         	@courses = Course.all
+ 	end
+
+     end
+
+    def updatedcourses
+ 	@requirements_to_show = Course.all_requirements
+	@all_departments = Course.all_departments
+ 	@all_requirements = Course.all_requirements
+ 	@courses = Course.all
+	@addCart = []
+	@courses.each do |each_course|
+		@addCart << each_course.course_num
+	end
+ 	# flash[:warning] = "#{params[:show_course]}"
+    end  
     
     def index
         @all_departments = Course.all_departments 
@@ -45,6 +88,13 @@ class CoursesController < ApplicationController
         if !(params.has_key?(:requirements))
             @requirements_to_show = []
         end
+        @addCart = []
+        in_cart = Cart.where({user_id: "1"})
+        if in_cart != nil
+            in_cart.each do |each_course|
+                @addCart << each_course.course_number
+            end
+        end
     end
     
     def add_faq
@@ -63,4 +113,35 @@ class CoursesController < ApplicationController
         @course = Course.find_by(course_num: params[:course_number])
         redirect_to course_detail_path(@course)
     end
+    
+     def add_to_cart
+        @overlap = []
+        @cartDetails = [] 
+        course_time_array = [] 
+        if params[:addCart] != nil
+            if params[:addCart].size < 7
+                cart = params[:addCart]
+                Cart.delete_all
+                cart.each do |each_course|
+                    course = Course.find_by(course_num: each_course[0])
+                    Cart.create(user_id: "1", course_number: course.course_num, course_time: course.course_time)
+                    @cartDetails << {user_id: "1", course_number: course.course_num, course_time: course.course_time}
+                    if course_time_array.include?(course.course_time)
+                        @overlap << course.course_time
+                        flash[:colormessage] = "There is an overlap between courses indicated by warning symbols. Please go back to course listing page and remove the courses from the cart."
+                    else
+                        course_time_array << course.course_time
+                    end
+                end
+                return
+            else
+                flash[:message] = "Cart size is cannot be greater than 6. Please limit the courses."
+            end
+        else
+           flash[:message] = "Nothing to add."
+        end    
+        redirect_to courses_path 
+        return
+    end
 end
+

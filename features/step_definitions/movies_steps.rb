@@ -23,9 +23,9 @@ Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   expect(page.body.index(e1) < page.body.index(e2))
 end
 
-When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
-  rating_list.split(', ').each do |rating|
-    step %{I #{uncheck.nil? ? '' : 'un'}check "ratings_#{rating}"}
+When /I (un)?check the following course: (.*)/ do |uncheck, course_list|
+  course_list.split(', ').each do |course|
+    step %{I #{uncheck.nil? ? '' : 'un'}check "addCart[#{course}]"}
   end
 end
 

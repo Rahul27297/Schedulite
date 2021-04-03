@@ -5,11 +5,14 @@ courses = [
 
 {:course_num => 'COMS W3107', :dept => 'Computer Science', :course_name => 'Clean Object-Oriented Design', :professor => 'John Kender', :requirement => 'General Technical Requirement', :course_time => 'MW 1:10pm-2:25pm'},
 
-
+{:course_num => 'COMS W3108', :dept => 'Computer Science', :course_name => 'Clean Object-Oriented Design session 2', :professor => 'Adam Cannon', :requirement => 'General Technical Requirement', :course_time => 'MW 1:10pm-2:25pm'},
+    
 {:course_num => 'COMS W3134', :dept => 'Computer Science', :course_name => 'Data Structures in Java', :professor => 'Paul Blaer', :requirement => 'Major Core', :course_time => 'MW 5:40pm-6:55pm'},
 
 
 {:course_num => 'COMS W4771', :dept => 'Computer Science', :course_name => 'Machine Learning', :professor => 'Nakul Verma', :requirement => 'Track Course', :course_time => 'TR 1:10pm-2:25pm'},
+
+{:course_num => 'COMS W4772', :dept => 'Computer Science', :course_name => 'Machine Learning-2', :professor => 'Joshua B Gordon', :requirement => 'Track Course', :course_time => 'TR 1:10pm-2:25pm'},
 
 
 {:course_num => 'COMS W4995', :dept => 'Computer Science', :course_name => 'Topics in Computer Science: Applied Deep Learning', :professor => 'Joshua B Gordon', :requirement => 'General Technical Elective', :course_time => 'R 7:00pm-9:30pm'},
