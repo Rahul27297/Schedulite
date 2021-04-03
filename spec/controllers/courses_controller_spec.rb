@@ -25,12 +25,13 @@ RSpec.describe CoursesController, type: :controller do
   end  
    
  describe 'GET#Show' do
+  course1 = {}
   before do
-    Course.create(:course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
+    Course.create(:id => 555, :course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
     Coursedetails.create(:number => 'C1', :points => '3', :coursetype =>'LECTURE', :method_of_inst =>'Hybrid', :detail => '----------')
   end
   it 'should render the show template' do
-    get :show, id: 1
+    get :show, id: 555
     expect(response).to render_template('show')
   end   
  end
