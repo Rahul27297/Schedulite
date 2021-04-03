@@ -65,12 +65,35 @@ RSpec.describe CoursesController, type: :controller do
   end
   it 'should have Cart size greater message in flash' do
     post :add_to_cart, "addCart"=>{"C1"=>"1", "C2"=>"1", "C3"=>"1", "C4"=>"1", "C5"=>"1", "C6"=>"1", "C7"=>"1"}
-    expect(flash[:message]).to eq "Cart size is cannot be greater than 6. Please limit the courses."
+    expect(flash[:message]).to eq "Cart size cannot be greater than 6. Please limit the courses."
   end
   it 'should have Nothing to add message in flash' do
     post :add_to_cart
     expect(flash[:message]).to eq "Nothing to add."
   end   
  end
-    
+
+describe 'POST#add_faq' do
+  before do
+    Course.create(:id => '591', :course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
+    CourseFaq.create(:number => 'Q1', :question => 'What is the grading schema?', :course_number => 'COMSW 1004')
+    CourseFaq.create(:number => 'Q2', :question => 'What are the pre-requisites for this course?', :course_number => 'COMSW 1005')
+  end
+  it 'adds faq to a particular course' do
+    post :add_faq, :id => '591', :inputCourse => 'C1', :course_num => 'C1', :inputQuestion => 'What is the difficulty level?'
+    expect(response).to redirect_to(course_detail_path) 
+  end 
+end
+   
+describe 'POST#add_ans' do
+  before do
+    Course.create(:id => '591', :course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
+    CourseFaq.create(:id => 'Q1', :number => 'Q1', :question => 'What is the grading schema?', :course_number => 'COMSW 1004')
+  end
+  it 'adds faq answer to a particular course' do
+    post :add_ans, :id => '591', :inputQuestionId => 'Q1', :course_number => 'C1', :inputAnswer => '50% assignments 50% exams'
+    expect(response).to redirect_to(course_detail_path) 
+  end 
+end
+
 end

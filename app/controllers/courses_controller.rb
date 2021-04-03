@@ -88,6 +88,7 @@ class CoursesController < ApplicationController
         @course = Course.find_by(course_num: course_num)
         course_faq = CourseFaq.create(course_number: course_num, question: question)
         faqs = CourseFaq.all
+        byebug
         redirect_to course_detail_path(@course)
     end
 
@@ -119,7 +120,7 @@ class CoursesController < ApplicationController
                 end
                 return
             else
-                flash[:message] = "Cart size is cannot be greater than 6. Please limit the courses."
+                flash[:message] = "Cart size cannot be greater than 6. Please limit the courses."
             end
         else
            flash[:message] = "Nothing to add."

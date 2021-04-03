@@ -36,4 +36,4 @@ Feature: course details
   When I check the following course: C1, C2, C3, C4, C5, C6, C7
   When   I press "Add To Cart"
   Then I should be on the Schedulite home page
-  And   I should see "Cart size is cannot be greater than 6. Please limit the courses."
+  And   I should see "Cart size cannot be greater than 6. Please limit the courses."
