@@ -42,12 +42,13 @@ class CoursesController < ApplicationController
  	@requirements_to_show = Course.all_requirements
 	@all_departments = Course.all_departments
  	@all_requirements = Course.all_requirements
- 	@courses = Course.all
-	@addCart = []
-	@courses.each do |each_course|
-		@addCart << each_course.course_num
+ 	@courses = []
+	Course.all.each do |each_course|
+		if params[:show_course].keys.exclude? each_course.course_num
+                        @courses << each_course
+                end
 	end
- 	# flash[:warning] = "#{params[:show_course]}"
+	@addCart = []
     end  
     
     def index

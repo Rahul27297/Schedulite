@@ -72,5 +72,20 @@ RSpec.describe CoursesController, type: :controller do
     expect(flash[:message]).to eq "Nothing to add."
   end   
  end
+
+
+ describe 'GET#prevcoursesform' do
+    it 'returns a succes response' do
+      get :prevcoursesform
+      expect(response).to be_success
+    end
+  end
+
+describe 'GET#updatedcourses' do
+    it 'returns a succes response' do
+      get :updatedcourses
+      expect(response).to be_success
+    end
+  end
     
 end

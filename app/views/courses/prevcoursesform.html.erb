@@ -1,5 +1,5 @@
-<%= form_tag courses_path, method: :get, id: 'departments_form' do %>
- <% end %>
+<%= form_tag updatedcourses_path, method: :get, id: 'departments_form' do %>
+
 
  <div class="row">
          <div class="col-12">
@@ -12,10 +12,9 @@
         <% end %>
  <div class="row">
          <div class="col-12">
- 	<form method = "get" action = "/updatedcourses">
              <%= submit_tag 'Update Course List', id: 'departments_submit', class: 'btn btn-primary' %>
- 	</form>
          </div>
      </div>	
          </div>
  </div>
+ <% end %>
