@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/course.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -9,49 +9,49 @@
           1,
           1,
           1,
+          null,
+          1,
+          26,
+          null,
+          null,
+          1,
+          28,
+          null,
           null,
           1,
           24,
           null,
           null,
           1,
-          25,
+          24,
           null,
           null,
           1,
+          27,
+          27,
+          null,
+          27,
           23,
           null,
-          null,
-          1,
-          23,
-          null,
-          null,
-          1,
-          25,
-          25,
-          null,
-          25,
-          22,
-          null,
-          3,
+          4,
           null,
           null,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/coursedetails.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/coursedetails.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/course_faq.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/course_faq.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/controllers/courses_controller.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
@@ -79,59 +79,63 @@
           null,
           null,
           1,
-          2,
-          2,
+          3,
+          3,
           0,
           null,
-          6,
+          9,
           null,
           null,
-          2,
-          2,
-          2,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          2,
-          0,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          23,
-          23,
-          null,
-          23,
-          2,
-          null,
-          105,
-          null,
-          null,
-          23,
+          3,
+          3,
           3,
           null,
-          20,
           null,
           null,
-          23,
-          23,
-          23,
-          23,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4,
+          2,
+          null,
+          2,
+          1,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          1,
+          24,
+          24,
+          null,
+          24,
+          2,
+          null,
+          110,
+          null,
+          null,
+          24,
+          3,
+          null,
           21,
           null,
-          23,
-          23,
-          23,
-          23,
+          null,
+          24,
+          24,
+          24,
+          24,
+          22,
+          null,
+          24,
+          24,
+          24,
+          24,
           2,
           null,
           null,
@@ -187,7 +191,7 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/controllers/application_controller.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -196,31 +200,31 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/helpers/application_helper.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/helpers/movies_helper.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/cart.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/cart.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/course_faq_an.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/course_faq_an.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/prev_courses_form.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/prev_courses_form.rb": {
         "lines": [
           0,
           0
@@ -229,23 +233,23 @@
         }
       }
     },
-    "timestamp": 1617468893
+    "timestamp": 1617729399
   },
   "RSpec": {
     "coverage": {
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/helpers/application_helper.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/helpers/movies_helper.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/controllers/courses_controller.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
@@ -295,6 +299,10 @@
           1,
           0,
           0,
+          null,
+          0,
+          0,
+          null,
           null,
           null,
           1,
@@ -381,7 +389,7 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/controllers/application_controller.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -390,13 +398,13 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/prev_courses_form.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/prev_courses_form.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/course.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -434,31 +442,31 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/cart.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/cart.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/coursedetails.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/coursedetails.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/course_faq.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/course_faq.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/course_faq_an.rb": {
+      "/Users/janelleponnor/Desktop/checkboxes_Schedulite/app/models/course_faq_an.rb": {
         "lines": [
           1,
           null
         ]
       }
     },
-    "timestamp": 1617725322
+    "timestamp": 1617729431
   }
 }

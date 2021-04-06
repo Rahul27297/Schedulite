@@ -44,8 +44,12 @@ class CoursesController < ApplicationController
  	@all_requirements = Course.all_requirements
  	@courses = []
 	Course.all.each do |each_course|
-		if params[:show_course].keys.exclude? each_course.course_num
-                        @courses << each_course
+		if params[:show_course].nil?
+			@courses = Course.all
+		else
+			if params[:show_course].keys.exclude? each_course.course_num
+                        	@courses << each_course
+			end
                 end
 	end
 	@addCart = []
