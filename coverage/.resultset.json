@@ -233,19 +233,19 @@
   },
   "RSpec": {
     "coverage": {
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/helpers/application_helper.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/helpers/movies_helper.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/controllers/courses_controller.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           null,
@@ -332,20 +332,20 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -381,7 +381,7 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/controllers/application_controller.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -390,25 +390,13 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/course_faq_an.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/prev_courses_form.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/course_faq.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/prev_courses_form.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/course.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -446,19 +434,31 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/cart.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/cart.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/newbranch_Schedulite/app/models/coursedetails.rb": {
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/coursedetails.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/course_faq.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/janelleponnor/Desktop/no_pending_Schedulite/app/models/course_faq_an.rb": {
         "lines": [
           1,
           null
         ]
       }
     },
-    "timestamp": 1617468919
+    "timestamp": 1617725322
   }
 }
