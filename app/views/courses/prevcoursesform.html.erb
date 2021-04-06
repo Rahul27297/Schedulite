@@ -7,7 +7,7 @@
  	<% @courses.each do |course| %>
          <div class="form-check  form-check-inline">
            <%= label_tag "show_course[#{course.course_num}]", course.course_num, class: 'form-check-label' %>
-           <%= check_box_tag "show_course[#{course.course_num}]", "0",  @courses.include?(course), class: 'form-check-input', id: "showcourses_#{course.course_num}"%>
+           <%= check_box_tag "show_course[#{course.course_num}]", "0",  false, class: 'form-check-input', id: "showcourses_#{course.course_num}"%>
          </div>	
         <% end %>
  <div class="row">

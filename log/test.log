@@ -28912,3 +28912,1016 @@ Processing by CoursesController#updatedcourses as HTML
   Rendered courses/updatedcourses.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:37.952186"], ["updated_at", "2021-04-06 17:16:37.952186"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:37.955733"], ["updated_at", "2021-04-06 17:16:37.955733"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:37.957181"], ["updated_at", "2021-04-06 17:16:37.957181"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:37.958749"], ["updated_at", "2021-04-06 17:16:37.958749"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:37.960141"], ["updated_at", "2021-04-06 17:16:37.960141"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "Details for C1."]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "Details for C2."]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "course_faqs" ("number", "question", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", 1], ["question", "What is the grading schema?"], ["course_number", "C1"], ["created_at", "2021-04-06 17:16:37.993563"], ["updated_at", "2021-04-06 17:16:37.993563"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:37 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.5ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.8ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 345ms (Views: 336.2ms | ActiveRecord: 2.2ms)
+Started GET "/courses/3087" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3087"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 3087]]
+  [1m[35mCoursedetails Load (0.3ms)[0m  SELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1  [["number", "C1"]]
+  [1m[36mCourseFaq Load (0.2ms)[0m  [1mSELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1[0m  [["course_number", "C1"]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2  [["course_number", "C1"], ["question_number", 79]]
+  Rendered courses/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 4.0ms | ActiveRecord: 2.0ms)
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE (course_num='C1')  ORDER BY "courses"."id" ASC LIMIT 1[0m
+Started POST "/course/faq/269" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_faq as HTML
+  Parameters: {"utf8"=>"✓", "inputQuestion"=>"what are the pre-requistes for this course?", "inputCourse"=>"C1", "commit"=>"Post", "id"=>"269"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "course_faqs" ("course_number", "question", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["course_number", "C1"], ["question", "what are the pre-requistes for this course?"], ["created_at", "2021-04-06 17:16:38.390247"], ["updated_at", "2021-04-06 17:16:38.390247"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/courses/3087
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+Started GET "/courses/3087" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3087"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 3087]]
+  [1m[36mCoursedetails Load (0.1ms)[0m  [1mSELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1[0m  [["number", "C1"]]
+  [1m[35mCourseFaq Load (0.2ms)[0m  SELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1  [["course_number", "C1"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2[0m  [["course_number", "C1"], ["question_number", 79]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2  [["course_number", "C1"], ["question_number", 80]]
+  Rendered courses/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 1.2ms)
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE (course_num='C1')  ORDER BY "courses"."id" ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.410532"], ["updated_at", "2021-04-06 17:16:38.410532"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.412405"], ["updated_at", "2021-04-06 17:16:38.412405"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "skjbksbgdgg.."]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "skjbksbgdgg.."]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms)
+Started GET "/prevcoursesform" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#prevcoursesform as HTML
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/prevcoursesform.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+Started GET "/updatedcourses?utf8=%E2%9C%93&commit=Update+Course+List" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#updatedcourses as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Update Course List"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/updatedcourses.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.470190"], ["updated_at", "2021-04-06 17:16:38.470190"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "MW 2:10pm-3:25pm"], ["created_at", "2021-04-06 17:16:38.472439"], ["updated_at", "2021-04-06 17:16:38.472439"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "CS"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "FR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.474376"], ["updated_at", "2021-04-06 17:16:38.474376"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C4"], ["dept", "CS"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "MW 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.477345"], ["updated_at", "2021-04-06 17:16:38.477345"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C5"], ["dept", "CS"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 2:10pm-3:25pm"], ["created_at", "2021-04-06 17:16:38.479762"], ["updated_at", "2021-04-06 17:16:38.479762"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C6"], ["dept", "CS"], ["course_name", "Course6"], ["professor", "Prof6"], ["requirement", "Major Core"], ["course_time", "FR 11:10am-12:25pm"], ["created_at", "2021-04-06 17:16:38.482380"], ["updated_at", "2021-04-06 17:16:38.482380"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C7"], ["dept", "CS"], ["course_name", "Course7"], ["professor", "Prof7"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.485349"], ["updated_at", "2021-04-06 17:16:38.485349"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+Started POST "/courses/addcart" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "addCart"=>{"C1"=>"1", "C2"=>"1"}, "commit"=>"Add To Cart"}
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C2"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C2"], ["course_time", "MW 2:10pm-3:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 6.8ms | ActiveRecord: 2.8ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.560129"], ["updated_at", "2021-04-06 17:16:38.560129"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "MW 2:10pm-3:25pm"], ["created_at", "2021-04-06 17:16:38.562778"], ["updated_at", "2021-04-06 17:16:38.562778"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "CS"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "FR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.566123"], ["updated_at", "2021-04-06 17:16:38.566123"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C4"], ["dept", "CS"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "MW 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.568206"], ["updated_at", "2021-04-06 17:16:38.568206"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C5"], ["dept", "CS"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 2:10pm-3:25pm"], ["created_at", "2021-04-06 17:16:38.570279"], ["updated_at", "2021-04-06 17:16:38.570279"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C6"], ["dept", "CS"], ["course_name", "Course6"], ["professor", "Prof6"], ["requirement", "Major Core"], ["course_time", "FR 11:10am-12:25pm"], ["created_at", "2021-04-06 17:16:38.573974"], ["updated_at", "2021-04-06 17:16:38.573974"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C7"], ["dept", "CS"], ["course_name", "Course7"], ["professor", "Prof7"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.575671"], ["updated_at", "2021-04-06 17:16:38.575671"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (12.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+Started POST "/courses/addcart" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Add To Cart"}
+Redirected to http://www.example.com/courses
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.614365"], ["updated_at", "2021-04-06 17:16:38.614365"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "MW 2:10pm-3:25pm"], ["created_at", "2021-04-06 17:16:38.616746"], ["updated_at", "2021-04-06 17:16:38.616746"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "CS"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "FR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.619359"], ["updated_at", "2021-04-06 17:16:38.619359"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "CS"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "MW 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.620516"], ["updated_at", "2021-04-06 17:16:38.620516"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "CS"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 2:10pm-3:25pm"], ["created_at", "2021-04-06 17:16:38.621537"], ["updated_at", "2021-04-06 17:16:38.621537"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "CS"], ["course_name", "Course6"], ["professor", "Prof6"], ["requirement", "Major Core"], ["course_time", "FR 11:10am-12:25pm"], ["created_at", "2021-04-06 17:16:38.623106"], ["updated_at", "2021-04-06 17:16:38.623106"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "CS"], ["course_name", "Course7"], ["professor", "Prof7"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.624918"], ["updated_at", "2021-04-06 17:16:38.624918"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+Started POST "/courses/addcart" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "addCart"=>{"C1"=>"1", "C2"=>"1", "C3"=>"1", "C4"=>"1", "C5"=>"1", "C6"=>"1", "C7"=>"1"}, "commit"=>"Add To Cart"}
+Redirected to http://www.example.com/courses
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.670629"], ["updated_at", "2021-04-06 17:16:38.670629"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.677213"], ["updated_at", "2021-04-06 17:16:38.677213"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "CS"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "FR 8:10am-9:25am"], ["created_at", "2021-04-06 17:16:38.679333"], ["updated_at", "2021-04-06 17:16:38.679333"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+Started POST "/courses/addcart" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "addCart"=>{"C1"=>"1", "C2"=>"1"}, "commit"=>"Add To Cart"}
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.4ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C2"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C2"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.735209"], ["updated_at", "2021-04-06 17:16:38.735209"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.737224"], ["updated_at", "2021-04-06 17:16:38.737224"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "CS"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "FR 8:10am-9:25am"], ["created_at", "2021-04-06 17:16:38.740253"], ["updated_at", "2021-04-06 17:16:38.740253"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.8ms)
+Started POST "/courses/addcart" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "addCart"=>{"C1"=>"1", "C2"=>"1"}, "commit"=>"Add To Cart"}
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C2"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C2"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 2.5ms | ActiveRecord: 1.2ms)
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+Started POST "/courses/addcart" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"utf8"=>"✓", "addCart"=>{"C2"=>"1", "C3"=>"1"}, "commit"=>"Add To Cart"}
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "carts"
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C2"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C2"], ["course_time", "TR 1:10pm-2:25pm"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C3"], ["course_time", "FR 8:10am-9:25am"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 1.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.829290"], ["updated_at", "2021-04-06 17:16:38.829290"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.844265"], ["updated_at", "2021-04-06 17:16:38.844265"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.846004"], ["updated_at", "2021-04-06 17:16:38.846004"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.847686"], ["updated_at", "2021-04-06 17:16:38.847686"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.849419"], ["updated_at", "2021-04-06 17:16:38.849419"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "Details for C1."]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "Details for C2."]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "course_faqs" ("number", "question", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", 1], ["question", "What is the grading schema?"], ["course_number", "C1"], ["created_at", "2021-04-06 17:16:38.858781"], ["updated_at", "2021-04-06 17:16:38.858781"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+Started GET "/courses/3121" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3121"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 3121]]
+  [1m[35mCoursedetails Load (0.4ms)[0m  SELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1  [["number", "C1"]]
+  [1m[36mCourseFaq Load (0.2ms)[0m  [1mSELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1[0m  [["course_number", "C1"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2  [["course_number", "C1"], ["question_number", 81]]
+  Rendered courses/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE (course_num='C1')  ORDER BY "courses"."id" ASC LIMIT 1[0m
+Started POST "/course/ans/3121" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#add_ans as HTML
+  Parameters: {"utf8"=>"✓", "inputAnswer"=>"50% assignments, 20% midterm and 30% final", "inputQuestionId"=>"81", "course_number"=>"C1", "commit"=>"Answer", "id"=>"3121"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "course_faq_ans" ("question_number", "answer", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_number", 81], ["answer", "50% assignments, 20% midterm and 30% final"], ["course_number", "C1"], ["created_at", "2021-04-06 17:16:38.889141"], ["updated_at", "2021-04-06 17:16:38.889141"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C1"]]
+Redirected to http://www.example.com/courses/3121
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+Started GET "/courses/3121" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3121"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 3121]]
+  [1m[36mCoursedetails Load (0.1ms)[0m  [1mSELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1[0m  [["number", "C1"]]
+  [1m[35mCourseFaq Load (0.1ms)[0m  SELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1  [["course_number", "C1"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2[0m  [["course_number", "C1"], ["question_number", 81]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2  [["course_number", "C1"], ["question_number", 81]]
+  [1m[36mCourseFaqAn Load (0.3ms)[0m  [1mSELECT "course_faq_ans".* FROM "course_faq_ans" WHERE "course_faq_ans"."course_number" = $1 AND "course_faq_ans"."question_number" = $2[0m  [["course_number", "C1"], ["question_number", 81]]
+  Rendered courses/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.9ms)
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE (course_num='C1')  ORDER BY "courses"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.909483"], ["updated_at", "2021-04-06 17:16:38.909483"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.911497"], ["updated_at", "2021-04-06 17:16:38.911497"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "skjbksbgdgg.."]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "skjbksbgdgg.."]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+Started GET "/courses/3126" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3126"}
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 3126]]
+  [1m[35mCoursedetails Load (0.1ms)[0m  SELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1  [["number", "C1"]]
+  [1m[36mCourseFaq Load (0.1ms)[0m  [1mSELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1[0m  [["course_number", "C1"]]
+  Rendered courses/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35mCourse Load (0.3ms)[0m  SELECT  "courses".* FROM "courses" WHERE (course_num='C1')  ORDER BY "courses"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.940467"], ["updated_at", "2021-04-06 17:16:38.940467"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.942342"], ["updated_at", "2021-04-06 17:16:38.942342"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "skjbksbgdgg.."]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "skjbksbgdgg.."]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+Started GET "/courses/3128" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"3128"}
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1[0m  [["id", 3128]]
+  [1m[35mCoursedetails Load (0.1ms)[0m  SELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1  [["number", "C1"]]
+  [1m[36mCourseFaq Load (0.1ms)[0m  [1mSELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1[0m  [["course_number", "C1"]]
+  Rendered courses/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+  [1m[35mCourse Load (0.5ms)[0m  SELECT  "courses".* FROM "courses" WHERE (course_num='C1')  ORDER BY "courses"."id" ASC LIMIT 1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.979666"], ["updated_at", "2021-04-06 17:16:38.979666"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.981814"], ["updated_at", "2021-04-06 17:16:38.981814"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.983226"], ["updated_at", "2021-04-06 17:16:38.983226"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.984476"], ["updated_at", "2021-04-06 17:16:38.984476"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:38.986004"], ["updated_at", "2021-04-06 17:16:38.986004"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:38 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.007835"], ["updated_at", "2021-04-06 17:16:39.007835"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.009894"], ["updated_at", "2021-04-06 17:16:39.009894"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.011627"], ["updated_at", "2021-04-06 17:16:39.011627"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.013511"], ["updated_at", "2021-04-06 17:16:39.013511"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.015130"], ["updated_at", "2021-04-06 17:16:39.015130"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.4ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+Started GET "/courses?department=CS" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"department"=>"CS"}
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."dept" = $1 AND "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')  [["dept", "CS"]]
+  Rendered courses/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.044227"], ["updated_at", "2021-04-06 17:16:39.044227"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "General Technical Requirement"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.046091"], ["updated_at", "2021-04-06 17:16:39.046091"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "General Technical Elective"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.047413"], ["updated_at", "2021-04-06 17:16:39.047413"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Track Course"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.048910"], ["updated_at", "2021-04-06 17:16:39.048910"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Track Course"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.050410"], ["updated_at", "2021-04-06 17:16:39.050410"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.073327"], ["updated_at", "2021-04-06 17:16:39.073327"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "General Technical Requirement"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.075092"], ["updated_at", "2021-04-06 17:16:39.075092"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "General Technical Elective"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.076839"], ["updated_at", "2021-04-06 17:16:39.076839"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Track Course"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.078158"], ["updated_at", "2021-04-06 17:16:39.078158"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Track Course"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.079246"], ["updated_at", "2021-04-06 17:16:39.079246"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.5ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')
+  Rendered courses/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+Started GET "/courses?utf8=%E2%9C%93&department=All&requirements[Track+Course]=1&commit=Refresh" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Track Course"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  [1m[35mCourse Load (0.3ms)[0m  SELECT "courses".* FROM "courses" WHERE "courses"."requirement" = 'Track Course'
+  Rendered courses/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.110862"], ["updated_at", "2021-04-06 17:16:39.110862"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "General Technical Requirement"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.112482"], ["updated_at", "2021-04-06 17:16:39.112482"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "EE"], ["course_name", "Course3"], ["professor", "Prof3"], ["requirement", "General Technical Elective"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.113967"], ["updated_at", "2021-04-06 17:16:39.113967"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "EE"], ["course_name", "Course4"], ["professor", "Prof4"], ["requirement", "Track Course"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.115732"], ["updated_at", "2021-04-06 17:16:39.115732"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "CE"], ["course_name", "Course5"], ["professor", "Prof5"], ["requirement", "Track Course"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.117297"], ["updated_at", "2021-04-06 17:16:39.117297"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+Started GET "/courses?utf8=%E2%9C%93&department=All&requirements[Major+Core]=1&requirements[General+Technical+Elective]=1&commit=Refresh" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  Parameters: {"utf8"=>"✓", "department"=>"All", "requirements"=>{"Major Core"=>"1", "General Technical Elective"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mCart Load (0.2ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Elective')[0m
+  Rendered courses/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.149910"], ["updated_at", "2021-04-06 17:16:39.149910"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.151361"], ["updated_at", "2021-04-06 17:16:39.151361"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "skjbksbgdgg.."]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "skjbksbgdgg.."]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+Started GET "/prevcoursesform" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#prevcoursesform as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/prevcoursesform.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "CS"], ["course_name", "Course1"], ["professor", "Prof1"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.173621"], ["updated_at", "2021-04-06 17:16:39.173621"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "CS"], ["course_name", "Course2"], ["professor", "Prof2"], ["requirement", "Major Core"], ["course_time", "TR 1:10pm-2:25pm"], ["created_at", "2021-04-06 17:16:39.175453"], ["updated_at", "2021-04-06 17:16:39.175453"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", "C1"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "Online"], ["detail", "skjbksbgdgg.."]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C2"], ["points", "3"], ["coursetype", "Lecture"], ["method_of_inst", "In-person"], ["detail", "skjbksbgdgg.."]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/courses" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#index as HTML
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1  [["user_id", "1"]]
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT "courses".* FROM "courses" WHERE "courses"."requirement" IN ('Major Core', 'General Technical Requirement', 'General Technical Elective', 'Track Course')[0m
+  Rendered courses/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms)
+Started GET "/prevcoursesform" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#prevcoursesform as HTML
+  [1m[35mCourse Load (0.7ms)[0m  SELECT "courses".* FROM "courses"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Rendered courses/prevcoursesform.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+Started GET "/updatedcourses?utf8=%E2%9C%93&show_course[C1]=0&commit=Update+Course+List" for 127.0.0.1 at 2021-04-06 13:16:39 -0400
+Processing by CoursesController#updatedcourses as HTML
+  Parameters: {"utf8"=>"✓", "show_course"=>{"C1"=>"0"}, "commit"=>"Update Course List"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Rendered courses/updatedcourses.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+Processing by CoursesController#index as HTML
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT "carts".* FROM "carts" WHERE "carts"."user_id" = $1[0m  [["user_id", "1"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered courses/index.html.erb within layouts/application (0.3ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "courses" ("id", "course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["id", 555], ["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.683318"], ["updated_at", "2021-04-06 17:17:11.683318"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "coursedetails" ("number", "points", "coursetype", "method_of_inst", "detail") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", "C1"], ["points", "3"], ["coursetype", "LECTURE"], ["method_of_inst", "Hybrid"], ["detail", "----------"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"555"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT 1  [["id", 555]]
+  [1m[36mCoursedetails Load (0.3ms)[0m  [1mSELECT  "coursedetails".* FROM "coursedetails" WHERE "coursedetails"."number" = $1 LIMIT 1[0m  [["number", "C1"]]
+  [1m[35mCourseFaq Load (0.3ms)[0m  SELECT "course_faqs".* FROM "course_faqs" WHERE "course_faqs"."course_number" = $1  [["course_number", "C1"]]
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered courses/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 1.8ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.704550"], ["updated_at", "2021-04-06 17:17:11.704550"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.706815"], ["updated_at", "2021-04-06 17:17:11.706815"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.708436"], ["updated_at", "2021-04-06 17:17:11.708436"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.710420"], ["updated_at", "2021-04-06 17:17:11.710420"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.712198"], ["updated_at", "2021-04-06 17:17:11.712198"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.713776"], ["updated_at", "2021-04-06 17:17:11.713776"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.714975"], ["updated_at", "2021-04-06 17:17:11.714975"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "carts"
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"addCart"=>{"C1"=>"1", "C2"=>"1"}}
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C2"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C2"], ["course_time", "MW 4:10pm-5:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "carts"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.734487"], ["updated_at", "2021-04-06 17:17:11.734487"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.737104"], ["updated_at", "2021-04-06 17:17:11.737104"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.739423"], ["updated_at", "2021-04-06 17:17:11.739423"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.741240"], ["updated_at", "2021-04-06 17:17:11.741240"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.742739"], ["updated_at", "2021-04-06 17:17:11.742739"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.744089"], ["updated_at", "2021-04-06 17:17:11.744089"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.745229"], ["updated_at", "2021-04-06 17:17:11.745229"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "carts"
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"addCart"=>{"C1"=>"1"}}
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "carts"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.752018"], ["updated_at", "2021-04-06 17:17:11.752018"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.753707"], ["updated_at", "2021-04-06 17:17:11.753707"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.755498"], ["updated_at", "2021-04-06 17:17:11.755498"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.757141"], ["updated_at", "2021-04-06 17:17:11.757141"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.758561"], ["updated_at", "2021-04-06 17:17:11.758561"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.759879"], ["updated_at", "2021-04-06 17:17:11.759879"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.760937"], ["updated_at", "2021-04-06 17:17:11.760937"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "carts"
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"addCart"=>{"C1"=>"1", "C2"=>"1", "C3"=>"1"}}
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "carts"[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mCourse Load (0.1ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C2"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C2"], ["course_time", "MW 4:10pm-5:25pm"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C3"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", "1"], ["course_number", "C3"], ["course_time", "MW 4:10pm-5:25pm"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "carts"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.772173"], ["updated_at", "2021-04-06 17:17:11.772173"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.773997"], ["updated_at", "2021-04-06 17:17:11.773997"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.775507"], ["updated_at", "2021-04-06 17:17:11.775507"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.776781"], ["updated_at", "2021-04-06 17:17:11.776781"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.777881"], ["updated_at", "2021-04-06 17:17:11.777881"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.778941"], ["updated_at", "2021-04-06 17:17:11.778941"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.780343"], ["updated_at", "2021-04-06 17:17:11.780343"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"addCart"=>{"C1"=>"1", "C2"=>"1"}}
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "carts"
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCourse Load (0.2ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C2"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C2"], ["course_time", "MW 4:10pm-5:25pm"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.792079"], ["updated_at", "2021-04-06 17:17:11.792079"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.793858"], ["updated_at", "2021-04-06 17:17:11.793858"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.795217"], ["updated_at", "2021-04-06 17:17:11.795217"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.796533"], ["updated_at", "2021-04-06 17:17:11.796533"]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.799545"], ["updated_at", "2021-04-06 17:17:11.799545"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.800999"], ["updated_at", "2021-04-06 17:17:11.800999"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.802526"], ["updated_at", "2021-04-06 17:17:11.802526"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"addCart"=>{"C1"=>"1", "C2"=>"1", "C3"=>"1"}}
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "carts"
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C1"], ["course_time", "TR 4:10pm-5:25pm"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C2"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C2"], ["course_time", "MW 4:10pm-5:25pm"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C3"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "carts" ("user_id", "course_number", "course_time") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", "1"], ["course_number", "C3"], ["course_time", "MW 4:10pm-5:25pm"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered courses/add_to_cart.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.813430"], ["updated_at", "2021-04-06 17:17:11.813430"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.814899"], ["updated_at", "2021-04-06 17:17:11.814899"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.816008"], ["updated_at", "2021-04-06 17:17:11.816008"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.817320"], ["updated_at", "2021-04-06 17:17:11.817320"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.818942"], ["updated_at", "2021-04-06 17:17:11.818942"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.820491"], ["updated_at", "2021-04-06 17:17:11.820491"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.821988"], ["updated_at", "2021-04-06 17:17:11.821988"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CoursesController#add_to_cart as HTML
+  Parameters: {"addCart"=>{"C1"=>"1", "C2"=>"1", "C3"=>"1", "C4"=>"1", "C5"=>"1", "C6"=>"1", "C7"=>"1"}}
+Redirected to http://test.host/courses
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.827061"], ["updated_at", "2021-04-06 17:17:11.827061"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C2"], ["dept", "Computer Science"], ["course_name", "Data Structures in Java"], ["professor", "Paul B"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.828461"], ["updated_at", "2021-04-06 17:17:11.828461"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C3"], ["dept", "Computer Science"], ["course_name", "Computer Networks"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.829533"], ["updated_at", "2021-04-06 17:17:11.829533"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C4"], ["dept", "Computer Science"], ["course_name", "Test-1"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.830789"], ["updated_at", "2021-04-06 17:17:11.830789"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C5"], ["dept", "Computer Science"], ["course_name", "Test-2"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.833940"], ["updated_at", "2021-04-06 17:17:11.833940"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["course_num", "C6"], ["dept", "Computer Science"], ["course_name", "Test-3"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.835424"], ["updated_at", "2021-04-06 17:17:11.835424"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "courses" ("course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["course_num", "C7"], ["dept", "Computer Science"], ["course_name", "Test-4"], ["professor", "Henning S"], ["requirement", "Major Core"], ["course_time", "MW 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.836517"], ["updated_at", "2021-04-06 17:17:11.836517"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by CoursesController#add_to_cart as HTML
+Redirected to http://test.host/courses
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "courses" ("id", "course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["id", 591], ["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.840857"], ["updated_at", "2021-04-06 17:17:11.840857"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "course_faqs" ("number", "question", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", 0], ["question", "What is the grading schema?"], ["course_number", "COMSW 1004"], ["created_at", "2021-04-06 17:17:11.845166"], ["updated_at", "2021-04-06 17:17:11.845166"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "course_faqs" ("number", "question", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["number", 0], ["question", "What are the pre-requisites for this course?"], ["course_number", "COMSW 1005"], ["created_at", "2021-04-06 17:17:11.847227"], ["updated_at", "2021-04-06 17:17:11.847227"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CoursesController#add_faq as HTML
+  Parameters: {"inputCourse"=>"C1", "course_num"=>"C1", "inputQuestion"=>"What is the difficulty level?", "id"=>"591"}
+  [1m[35mCourse Load (0.2ms)[0m  SELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1  [["course_num", "C1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "course_faqs" ("course_number", "question", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["course_number", "C1"], ["question", "What is the difficulty level?"], ["created_at", "2021-04-06 17:17:11.850252"], ["updated_at", "2021-04-06 17:17:11.850252"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/courses/591
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "courses" ("id", "course_num", "dept", "course_name", "professor", "requirement", "course_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["id", 591], ["course_num", "C1"], ["dept", "Computer Science"], ["course_name", "Intro to Computer Science"], ["professor", "Adam Cannon"], ["requirement", "Major Core"], ["course_time", "TR 4:10pm-5:25pm"], ["created_at", "2021-04-06 17:17:11.854357"], ["updated_at", "2021-04-06 17:17:11.854357"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "course_faqs" ("id", "number", "question", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["id", 0], ["number", 0], ["question", "What is the grading schema?"], ["course_number", "COMSW 1004"], ["created_at", "2021-04-06 17:17:11.856012"], ["updated_at", "2021-04-06 17:17:11.856012"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by CoursesController#add_ans as HTML
+  Parameters: {"inputQuestionId"=>"Q1", "course_number"=>"C1", "inputAnswer"=>"50% assignments 50% exams", "id"=>"591"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "course_faq_ans" ("question_number", "answer", "course_number", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["question_number", 0], ["answer", "50% assignments 50% exams"], ["course_number", "C1"], ["created_at", "2021-04-06 17:17:11.862712"], ["updated_at", "2021-04-06 17:17:11.862712"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mCourse Load (0.1ms)[0m  [1mSELECT  "courses".* FROM "courses" WHERE "courses"."course_num" = $1 LIMIT 1[0m  [["course_num", "C1"]]
+Redirected to http://test.host/courses/591
+Completed 302 Found in 8ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by CoursesController#prevcoursesform as HTML
+  [1m[35mCourse Load (0.2ms)[0m  SELECT "courses".* FROM "courses"
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered courses/prevcoursesform.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by CoursesController#updatedcourses as HTML
+  [1m[36mCourse Load (0.3ms)[0m  [1mSELECT "courses".* FROM "courses"[0m
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered courses/updatedcourses.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
