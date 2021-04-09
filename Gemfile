@@ -3,11 +3,14 @@ source :rubygems
 ruby '>= 2.6.6', '< 2.7.0'
 gem 'rails', '4.2.10'
 gem 'rerun'
-gem 'cucumber'
+gem 'cucumber', '2.4.0'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt'
 
 # for Heroku deployment 
 group :development, :test do
   gem 'pg','~> 0.15'
+  #gem 'sqlite3', '~> 1.3.13'  
   gem 'byebug'
   gem 'database_cleaner', '1.4.1'
   gem 'capybara', '2.4.4'

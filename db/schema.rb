@@ -11,20 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20210325212953) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-=======
-ActiveRecord::Schema.define(version: 20210327171633) do
+ActiveRecord::Schema.define(version: 20210405095441) do
 
   create_table "carts", force: :cascade do |t|
     t.string "user_id"
     t.string "course_number"
     t.string "course_time"
   end
->>>>>>> 4f4a885d7415c17edbed99662bc24051ff0ef1ed
 
   create_table "course_faq_ans", force: :cascade do |t|
     t.integer  "question_number"
@@ -60,5 +53,12 @@ ActiveRecord::Schema.define(version: 20210327171633) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+  end
+
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

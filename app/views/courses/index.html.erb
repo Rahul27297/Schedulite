@@ -42,7 +42,7 @@
      </div>
 
 <% end %>
-
+<%= link_to "Logout", logout_path, method: :post, class: 'btn btn-primary' %>
 <%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
 <div class="row" style = "top: 166px; position: absolute; right: 77px;">
         <div class="col-12">
