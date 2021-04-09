@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+    skip_before_action :authenticate, only: [:logout]
     
     def show
         id = params[:id] # retrieve movie ID from URI route
@@ -78,7 +79,7 @@ class CoursesController < ApplicationController
             @requirements_to_show = []
         end
         @addCart = []
-        in_cart = Cart.where({user_id: "1"})
+        in_cart = Cart.where({user_id: get_user_id_from_session})
         if in_cart != nil
             in_cart.each do |each_course|
                 @addCart << each_course.course_number
@@ -106,15 +107,16 @@ class CoursesController < ApplicationController
      def add_to_cart
         @overlap = []
         @cartDetails = [] 
+        user_id = get_user_id_from_session 
         course_time_array = [] 
         if params[:addCart] != nil
             if params[:addCart].size < 7
                 cart = params[:addCart]
-                Cart.delete_all
+                Cart.where(user_id: user_id).delete_all
                 cart.each do |each_course|
                     course = Course.find_by(course_num: each_course[0])
-                    Cart.create(user_id: "1", course_number: course.course_num, course_time: course.course_time)
-                    @cartDetails << {user_id: "1", course_number: course.course_num, course_time: course.course_time}
+                    Cart.create(user_id: user_id, course_number: course.course_num, course_time: course.course_time)
+                    @cartDetails << {user_id: user_id, course_number: course.course_num, course_time: course.course_time}
                     if course_time_array.include?(course.course_time)
                         @overlap << course.course_time
                         flash[:colormessage] = "There is an overlap between courses indicated by warning symbols. Please go back to course listing page and remove the courses from the cart."

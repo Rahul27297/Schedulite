@@ -33,6 +33,16 @@ coursedetails = [
     {:number => 'CHEN E4910', :points => '3', :coursetype =>'LECTURE', :method_of_inst =>'In-Person', :detail => 'Prerequisites: Pre-requisites: Thermodynamics (any), or General Chemistry Students must be engineering juniors or seniors, engineering graduate students, or PhD and undergraduate students in the sciences, e.g. chemistry or biology.'}
     ]
 
+users = [
+    {:username => 'hp2581@columbia.edu', :password => 'Abc567*'},
+    {:username => 'jp4024@columbia.edu', :password => '123'},
+    {:username => 'rc3374@columbia.edu', :password => '123'}
+]
+
+users.each do |user|
+  User.create!(user)
+end
+
 courses.each do |course|
   Course.create!(course)
 end
