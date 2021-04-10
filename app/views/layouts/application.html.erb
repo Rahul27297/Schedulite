@@ -10,15 +10,12 @@
   </head>
   <body>
     <%# These classes come from the Bootstrap CSS framework. %>
-    <nav class="navbar navbar-expand-lg bg-primary text-white mb-3">
-      <h1 class="title">Schedulite: The New Way of Personalized Scheduling</h1>
+    <nav class="navbar navbar-dark text-white sticky-top" style="background-color: #9BDDFF;">
+      <h2 style="margin-left: 20px"><%= link_to "Schedulite: The New Way of Personalized Scheduling", courses_path, style: "color: white" %></h2>
+      <%= link_to "Logout", logout_path, method: :post, class: 'btn btn-outline-success', style: 'border: 1px solid white; border-color: white; color: white; margin-right: 20px' %>
     </nav>
-    <div class="container">
       <%# Render "flash" messages in our application. This loads _flash.erb %>
       <%= render 'layouts/flash' %>
-      <main id="main">
         <%= yield %>
-      </main>
-    </div>
   </body>
 </html>

@@ -30,6 +30,29 @@
 #departments_submit {
     margin-bottom: 10px;
 }
+
+.btn-outline-success {
+  color: white;
+  background-color: transparent;
+  border-color: white;
+}
+
+.btn-outline-success:hover {
+  color: #5BA4CF;
+  background-color:white;
+  border-color: white;
+}
+
+.btn-cu {
+  background-color: #9BDDFF;
+  color: white;
+}
+
+.bg-cu {
+  background-color: #9BDDFF;
+  color: white;
+}
+
 /*
 .btn {
     transition: width 10s;
