@@ -31,4 +31,5 @@ class Course < ActiveRecord::Base
             Course.where({dept: department, requirement: requirements})
         end
     end
+    has_many :likes, dependent: :destroy
 end

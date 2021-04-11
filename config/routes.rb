@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   get    '/login' => 'authentication#login', as: :login
   post    '/logout' => 'authentication#logout', as: :logout
 
+  resources :courses do
+	resources :likes
+  end
+
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
