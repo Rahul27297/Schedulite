@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   post   '/course/faq/:id(.:format)' => 'courses#add_faq', as: :course_faq
   post   '/courses/addcart(.:format)' => 'courses#add_to_cart', as: :courses_add_cart
   get    '/login' => 'authentication#login', as: :login
-  post    '/logout' => 'authentication#login', as: :logout
+  post    '/logout' => 'authentication#logout', as: :logout
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

@@ -5,6 +5,26 @@ Given /the following courses exist/ do |courses_table|
   end
 end
 
+Given /the following users exist/ do |users|
+  users.hashes.each do |user|
+    User.create user
+  end
+end
+
+Given /I login with username "(.*)" and password "(.*)"/ do |v1, v2|
+    visit path_to("login page")
+    fill_in('username', with: "admin")
+    fill_in('password', with: "123")
+    click_button('Login')
+    #puts "driver.. #{Capybara.current_session.driver}"
+    #Capybara.current_session.page.driver.set_cookie "#{:expires_at}=#{Time.now + 24.hours}"
+end
+
+And /I logout/ do
+    click_link('Logout')
+end
+
+
 Given /the following course details exist/ do |coursedetail_table|
   coursedetail_table.hashes.each do |coursedetail|
     Coursedetails.create coursedetail

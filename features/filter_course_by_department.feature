@@ -12,14 +12,20 @@ Background: courses in database
   | C3           | EE     | Course3     |   Prof3     |  Major Core | TR 1:10pm-2:25pm |
   | C4           | EE     | Course4     |   Prof4     |  Major Core | TR 1:10pm-2:25pm |
   | C5           | CE     | Course5     |   Prof5     |  Major Core | TR 1:10pm-2:25pm |
+  
+  Given the following users exist:
+  | username       | password   |
+  | admin          | 123        |
 
 Scenario: list all courses without filters
+    Given I login with username "admin" and password "123"
     When I go to the Schedulite home page
     Then I should see "C1"
     And  I should see "C3"
     And  I should see "C5"
 
 Scenario: filter courses by dropdown
+    Given I login with username "admin" and password "123"
     Given I am on the Schedulite home page
     When  I go to courses page for "CS" department
     Then  I should see "C1"
