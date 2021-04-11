@@ -25,19 +25,31 @@ class CoursesController < ApplicationController
     end
 
     def prevcoursesform
- 	@courses = Course.all
-         if params.has_key?(:courses)
+ 	# source: http://railscasts.com/episodes/37-simple-search-form?autoplay=true
+	@courses = Course.all
+        if params.has_key?(:courses)
              @query_courses = params[:courses]
-         else
+        else
              @query_courses = Hash[@courses.map {|x| [x, 1]}]
-         end
+        end
 
-         @courses = Course.filter_by_params(@department, @query_courses.keys)
-         if !(params.has_key?(:requirements))
+        @courses = Course.filter_by_params(@department, @query_courses.keys)
+        if !(params.has_key?(:requirements))
          	@courses = Course.all
  	end
+	if params[:search]
+	 	@courses = Course.where("course_num LIKE ?", "%#{params[:search]}%")
+	end
+    end
 
-     end
+    def searchresults
+         if params[:search]
+                @courses = Course.where("course_num LIKE ?", "%#{params[:search]}%")
+         else
+		@courses = Course.all
+	 end
+    end
+
 
     def updatedcourses
  	@requirements_to_show = Course.all_requirements
