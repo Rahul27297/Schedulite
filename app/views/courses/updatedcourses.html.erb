@@ -4,52 +4,41 @@
      <span class="error"><%= flash[:message] %></span>
    </div>
 <% end %>
-<%= form_tag courses_path, method: :get, id: 'departments_form' do %>
-    <div class="row">
-        <div class="col-6">
-            <h2 >Fall 2021 Courses</h2>
-        </div>
-        <div class="col-6">
-            <label  class="label_name"> Department: </label>
-            <select name="department" class=".department-dropdown">
-                <%= options_for_select(@all_departments, selected: @department_to_show) %>
-            </select>
-        </div>
-    </div>
 
+<nav class="navbar navbar-dark text-white sticky-top" style="background-color: #5BA4CF">
+  <%= link_to "Add Previously Taken Courses", prevcoursesform_url, class: "btn btn-outline-success", style: "margin-left: 20px" %>
+  <h4>Fall 2021 Courses</h4>  
+  <%= form_tag courses_path, method: :get, id: 'departments_form' do %>
+    <div>
+      <label  class="label_name"> Department: </label>
+      <select name="department" class="btn btn-outline-success dropdown-toggle" style="margin-right: 20px">
+          <%= options_for_select(@all_departments, selected: @department_to_show) %>
+      </select>
+    </div>
+</nav>
+
+<div style="margin-right: 40px;margin-left: 40px;">
+<br>
     <div class="row">
-        <div class="col-12">
-        <label class="label_name"> Requirement: </label>
+        <div class="col-11">
+        <label class="label_name">Filter by Requirement: </label>
         <% @all_requirements.each do |requirement| %>
         <div class="form-check  form-check-inline">
           <%= label_tag "requirements[#{requirement}]", requirement, class: 'form-check-label' %>
           <%= check_box_tag "requirements[#{requirement}]", "1",  @requirements_to_show.include?(requirement), class: 'form-check-input', id: "requirements_#{requirement}"%>
         </div>
-       <% end %>                     
+       <% end %>
+       <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-cu' %>     
+       <% end %>                
+        </div>
+
+        <div>
+          <%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
+          <%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-cu' %>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-primary' %>
-        </div>
-    </div>
-
-    <div class="row">
-         <div class="col-12">
-         	<%= link_to "Add Previously Taken Courses", prevcoursesform_url %>
- 	</div>
-     </div>
-
-<% end %>
-
-<%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
-<div class="row" style = "top: 166px; position: absolute; right: 77px;">
-        <div class="col-12">
-            <%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-primary' %>
-        </div>
-</div>
-<table class="table table-striped col-md-12" id="movies">
+<table class="table table-hover col-md-12" id="movies">
   <thead>
     <tr>
       <th>Course Number</th>
@@ -98,3 +87,4 @@
   </tbody>
 </table>
 <% end %>
+</div>

@@ -1,9 +1,9 @@
+<div style="margin-left: 40px; margin-right: 40px">
+<br>
 <%= form_tag updatedcourses_path, method: :get, id: 'departments_form' do %>
-
-
  <div class="row">
          <div class="col-12">
-         <label class="label_name"> Already Taken: </label>
+         <label class="label_name"> Courses completed yet: </label>
  	<% @courses.each do |course| %>
          <div class="form-check  form-check-inline">
            <%= label_tag "show_course[#{course.course_num}]", course.course_num, class: 'form-check-label' %>
@@ -12,9 +12,10 @@
         <% end %>
  <div class="row">
          <div class="col-12">
-             <%= submit_tag 'Update Course List', id: 'departments_submit', class: 'btn btn-primary' %>
+             <%= submit_tag 'Update Course List', id: 'departments_submit', class: 'btn btn-cu' %>
          </div>
      </div>	
          </div>
  </div>
  <% end %>
+ </div>

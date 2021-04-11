@@ -1,4 +1,5 @@
 <!--  app/views/courses/add_to_cart.html.erb -->
+<div style="margin-left: 40px;margin-right:40px;margin-top: 20px">
 <% if flash[:colormessage] %>
    <div class="alert alert-danger">
      <span class="error"><%= flash[:colormessage] %></span>
@@ -9,7 +10,7 @@
       <h2>Cart Details</h2>
     </div>
     <div class = "col-6">
-      <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-primary float-right' %>
+      <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-cu float-right' %>
     </div>
   </div>
 
@@ -20,8 +21,9 @@
        <% color_to_timing = {} %> 
        <% @cartDetails.each do |detail| %>  
       <li class="list-group-item">
-        <label class="font-weight-bold", style = "float: left; width: 45%;"> Number: <%= detail[:course_number] %></label>
-        <label class="font-weight-bold" style = "float: left; width: 45%;"> Time: <%= detail[:course_time] %></label>
+        <label class="font-weight-bold", style = "float: left; width: 20%;"> Number: <%= detail[:course_number] %></label>
+        <label class="font-weight-bold", style = "float: left; width: 55%;"> Course: <%= detail[:course_name] %></label>
+        <label class="font-weight-bold" style = "float: left; width: 20%;"> Time: <%= detail[:course_time] %></label>
         <% if @overlap.include?(detail[:course_time])
                if color_to_timing[detail[:course_time]] != nil
                    color = color_to_timing[detail[:course_time]]
@@ -46,3 +48,4 @@
       <% end %>   
     </ul>
   </div>
+</div>

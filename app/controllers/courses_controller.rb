@@ -54,6 +54,7 @@ class CoursesController < ApplicationController
                 end
 	end
 	@addCart = []
+    @requirements_to_show = Course.requirements_to_show
     end  
     
     def index
@@ -115,8 +116,8 @@ class CoursesController < ApplicationController
                 Cart.where(user_id: user_id).delete_all
                 cart.each do |each_course|
                     course = Course.find_by(course_num: each_course[0])
-                    Cart.create(user_id: user_id, course_number: course.course_num, course_time: course.course_time)
-                    @cartDetails << {user_id: user_id, course_number: course.course_num, course_time: course.course_time}
+                    Cart.create(user_id: user_id, course_number: course.course_num, course_name: course.course_name, course_time: course.course_time)
+                    @cartDetails << {user_id: user_id, course_number: course.course_num, course_name: course.course_name, course_time: course.course_time}
                     if course_time_array.include?(course.course_time)
                         @overlap << course.course_time
                         flash[:colormessage] = "There is an overlap between courses indicated by warning symbols. Please go back to course listing page and remove the courses from the cart."

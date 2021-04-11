@@ -1,47 +1,77 @@
 <!--  app/views/courses/show.html.erb -->
 
+<div style="margin-left: 40px;margin-right: 40px">
+  <br>
   <div class = "row">
     <div class = "col-6">
       <h2>Details about <em><%= @coursedetail.number %></em></h2>
     </div>
     <div class = "col-6">
-      <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-primary float-right' %>
+      <%= link_to 'Back to Course list', courses_path, :class => 'btn btn-cu float-right' %>
     </div>
   </div>
 
   <div>
-    <ul id="details" class="list-group">
-      <li class="list-group-item">
-        <label class="font-weight-bold"> Number: </label>
-        <%= @coursedetail.number %>
-      </li>
-      <li class="list-group-item">
+  <table class="table table-hover col-md-12" id="details">
+      <tr>
+      <td>
+      <label class="font-weight-bold"> Number: </label>
+      </td>
+      <td>
+      <%= @coursedetail.number %>
+      </td>
+      </tr>
+      <tr>
+      <td>
       <label class="font-weight-bold"> Instructor: </label>
+      </td>
+      <td>
         <%= @course.professor %>
-      </li>
-      <li class="list-group-item">
+      </td>
+      </tr>
+      <tr>
+      <td>
       <label class="font-weight-bold"> Course Name: </label>
+      </td>
+      <td>
         <%= @course.course_name %>
-      </li>  
-      <li class="list-group-item">
+      </td>  
+      </tr>
+      <tr>
+      <td>
       <label class="font-weight-bold"> Type: </label>
-        <%= @coursedetail.coursetype %>
-      </li>
-      <li class="list-group-item">
+      </td>
+      <td>
+      <%= @coursedetail.coursetype %>
+      </td>
+      </tr>
+      <tr>
+      <td>
       <label class="font-weight-bold"> Points: </label>
+      </td>
+      <td>
         <%= @coursedetail.points %>
-      </li> 
-      <li class="list-group-item">
+      </td> 
+      </tr>
+      <tr>
+      <td>
       <label class="font-weight-bold"> Method of Instruction: </label>
+      </td>
+      <td>
         <%= @coursedetail.method_of_inst %>
-      </li>  
-      <li class="list-group-item">
+      </td>  
+      </tr>
+      <tr>
+      <td>
       <label class="font-weight-bold"> Details: </label>
+      </td>
+      <td>
         <%= @coursedetail.detail %>
-      </li>
-    </ul>
+      </td>
+      </tr>
+    </table>
   </div>
-  <br><br>
+  <br>
 
   <h2>FAQs</h2>
 
@@ -62,7 +92,7 @@
             </div>
             <div class = "row">
               <div class = "col-12">
-                <%= submit_tag 'Answer', id: 'answer_submit', class: 'btn btn-primary' %>
+                <%= submit_tag 'Answer', id: 'answer_submit', class: 'btn btn-cu' %>
               </div>
             </div>
           <% end %>
@@ -77,13 +107,13 @@
 
     <div class="card">
       <%= form_tag course_faq_path(@coursedetail), method: :post, id: 'questions_form' do %>
-        <div class="card-header text-white bg-primary">
+        <div class="card-header text-white bg-cu">
           Post a Question to instructors
         </div>
         <div class="card-body">
           <input type="text" name="inputQuestion" class="form-control" id="inputQuestion" placeholder="Post a question" style="margin-bottom: 10px;">
           <input type="hidden" name="inputCourse" class="form-control" id="inputCourse" value='<%= @coursedetail.number%>'>
-          <%= submit_tag 'Post', id: 'questions_submit', class: 'btn btn-primary' %>
+          <%= submit_tag 'Post', id: 'questions_submit', class: 'btn btn-cu' %>
         </div>
       <% end %>
     </div>
@@ -91,3 +121,4 @@
     <br>
     <br>
     <br>
+  </div>  

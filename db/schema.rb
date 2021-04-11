@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20210405095441) do
+ActiveRecord::Schema.define(version: 20210410223146) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
     t.string "user_id"
     t.string "course_number"
     t.string "course_time"
+    t.string "course_name"
   end
 
   create_table "course_faq_ans", force: :cascade do |t|
@@ -25,6 +29,14 @@ ActiveRecord::Schema.define(version: 20210405095441) do
     t.string   "course_number"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "course_faq_questions", force: :cascade do |t|
+    t.integer  "number"
+    t.string   "course_number"
+    t.text     "question"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "course_faqs", force: :cascade do |t|
@@ -59,6 +71,6 @@ ActiveRecord::Schema.define(version: 20210405095441) do
     t.string "password_digest"
   end
 
-  add_index "users", ["username"], name: "index_users_on_username", unique: true
+  add_index "users", ["username"], name: "index_users_on_username", unique: true, using: :btree
 
 end
