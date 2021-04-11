@@ -24,6 +24,6 @@ Feature: course details
   Given I login with username "admin" and password "123"
   Given I go to the Schedulite home page
   When I follow "Add Previously Taken Courses"
-  Then I should be on the previously taken courses page 
-    
-    
+  When I fill in "search" with "C1"
+  And I press "Search"
+  Then I should see "Already Taken: C1"

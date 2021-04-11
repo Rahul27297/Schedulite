@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   post   '/courses/addcart(.:format)' => 'courses#add_to_cart', as: :courses_add_cart
   get    '/login' => 'authentication#login', as: :login
   post    '/logout' => 'authentication#logout', as: :logout
+  get    '/searchresults' => 'courses#searchresults', via: :all
 
   resources :courses do
 	resources :likes
