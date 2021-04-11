@@ -4,10 +4,21 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception   
     before_action :authenticate
     
+  @user_logged_in = 0
+
+  def self.user_logged_in
+    return @user_logged_in
+  end
+
+  def self.user_logged_in=(val)
+    @user_logged_in = val
+  end
+
   def authenticate 
       session_expiry
       update_activity_time
       token = session[:user]
+      @user_signed_in = 0
       puts "token is #{token}"
       if !token.nil?
           decoded_token = JWT.decode(token, secret)
@@ -16,11 +27,14 @@ class ApplicationController < ActionController::Base
           user = User.find(user_id)
           if user.nil?
               render :template => "authentication/login"
+          else
+            @user_logged_in = 1
           end
       else
           render :template => "authentication/login"
       end
   end
+
   def get_user_id_from_session
       user_id = nil
       token = session[:user]
@@ -28,6 +42,7 @@ class ApplicationController < ActionController::Base
           decoded_token = JWT.decode(token, secret)
           payload = decoded_token.first
           user_id = payload["user_id"]
+          @user_logged_in = 1
       end
       user_id
   end

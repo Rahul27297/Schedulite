@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+#cu-navbar {
+  visibility: visible;
+}
+ 
 .logo_image {
   left: 270px;
   position: absolute;
