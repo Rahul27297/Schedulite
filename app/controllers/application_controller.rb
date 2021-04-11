@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception   
     before_action :authenticate
     
-  def authenticate 
+  def authenticate
       session_expiry
       update_activity_time
       token = session[:user]
@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
           render :template => "authentication/login"
       end
   end
+    
   def get_user_id_from_session
       user_id = nil
       token = session[:user]
@@ -36,6 +37,7 @@ class ApplicationController < ActionController::Base
       if session[:user]
           session.delete(:user)
       end
+      reset_session
   end
     
   def session_expiry

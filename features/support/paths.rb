@@ -20,6 +20,7 @@ module NavigationHelpers
       course_detail_path(Course.where("course_num=?", $1).first)
     when /^courses page for "(.*)" department$/ then '/courses?department=CS'
     when /^filter courses by "Track Course"$/ then '/courses?requirements[Track Course]=1'
+    when /^login page$/ then '/login'   
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

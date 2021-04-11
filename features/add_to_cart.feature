@@ -15,23 +15,28 @@ Feature: course details
   | C6           | CS     | Course6     |   Prof6     |  Major Core | FR 11:10am-12:25pm |
   | C7           | CS     | Course7     |   Prof7     |  Major Core | TR 1:10pm-2:25pm   |
 
-
-  
+  Given the following users exist:
+  | username       | password   |
+  | admin          | 123        |
+ 
  
  Scenario: Check add to cart 
-  Given I go to the Schedulite home page
+  Given I login with username "admin" and password "123"
+  Then I should be on the Schedulite home page 
   When I check the following course: C1, C2
   When   I press "Add To Cart"
   Then  I should see "C1"
   And   I should see "C2"
   
  Scenario: Check add to cart with no courses selected 
+  Given I login with username "admin" and password "123"
   Given I go to the Schedulite home page
   When   I press "Add To Cart"
   Then I should be on the Schedulite home page
   And   I should see "Nothing to add."
  
- Scenario: Check add to cart with seven courses selected 
+ Scenario: Check add to cart with seven courses selected
+  Given I login with username "admin" and password "123"
   Given I go to the Schedulite home page
   When I check the following course: C1, C2, C3, C4, C5, C6, C7
   When   I press "Add To Cart"

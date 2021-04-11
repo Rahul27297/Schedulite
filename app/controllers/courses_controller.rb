@@ -58,6 +58,7 @@ class CoursesController < ApplicationController
     end  
     
     def index
+        puts "params are ... #{params}"
         @all_departments = Course.all_departments 
         @all_requirements = Course.all_requirements
 
@@ -108,8 +109,8 @@ class CoursesController < ApplicationController
      def add_to_cart
         @overlap = []
         @cartDetails = [] 
-        user_id = get_user_id_from_session 
-        course_time_array = [] 
+        user_id = get_user_id_from_session
+        course_time_array = []
         if params[:addCart] != nil
             if params[:addCart].size < 7
                 cart = params[:addCart]

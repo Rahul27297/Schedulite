@@ -10,8 +10,13 @@ Feature: course details
   | C1           | CS     | Course1     |   Prof1     |  Major Core | TR 1:10pm-2:25pm |
   | C2           | CS     | Course2     |   Prof2     |  Major Core | TR 1:10pm-2:25pm |
   | C3           | CS     | Course3     |   Prof3     |  Major Core | FR 8:10am-9:25am |
-
+   
+  Given the following users exist:
+  | username       | password   |
+  | admin          | 123        | 
+   
   Scenario: Check add to cart with time overlap message
+  Given I login with username "admin" and password "123"
   Given I go to the Schedulite home page
   When I check the following course: C1, C2
   When   I press "Add To Cart"
@@ -20,6 +25,7 @@ Feature: course details
   And   I should see "C2" 
   
   Scenario: Check add to cart with time overlap message and 
+  Given I login with username "admin" and password "123"
   Given I go to the Schedulite home page
   When I check the following course: C1, C2
   When   I press "Add To Cart"

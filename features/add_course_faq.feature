@@ -21,9 +21,14 @@ Background: courses in database
   Given the following course faqs exist:
   | number       | question                           | course_number |
   | 1            | What is the grading schema?        | C1            |
+  
+  Given the following users exist:
+  | username       | password   |
+  | admin          | 123        |
 
 
 Scenario: add faq for a course
+    Given I login with username "admin" and password "123"
     Given I am on the Schedulite home page
     When I follow "More about Course1"
     Then  I should be on course details page for "C1"
