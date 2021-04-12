@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
           render :template => "authentication/login"
       end
   end
-
+    
   def get_user_id_from_session
       user_id = nil
       token = session[:user]
@@ -51,6 +51,7 @@ class ApplicationController < ActionController::Base
       if session[:user]
           session.delete(:user)
       end
+      reset_session
   end
     
   def session_expiry

@@ -4,11 +4,11 @@
      <span class="error"><%= flash[:message] %></span>
    </div>
 <% end %>
-
+<div>
+<%= form_tag courses_path, method: :get, id: 'departments_form' do %>     
 <nav class="navbar navbar-dark text-white sticky-top" style="background-color: #5BA4CF">
   <%= link_to "Add Previously Taken Courses", prevcoursesform_url, class: "btn btn-outline-success", style: "margin-left: 20px" %>
-  <h4>Fall 2021 Courses</h4>  
-  <%= form_tag courses_path, method: :get, id: 'departments_form' do %>
+  <h4>Fall 2021 Courses</h4>
     <div>
       <label  class="label_name"> Department: </label>
       <select name="department" class="btn btn-outline-success dropdown-toggle" style="margin-right: 20px">
@@ -28,16 +28,19 @@
           <%= check_box_tag "requirements[#{requirement}]", "1",  @requirements_to_show.include?(requirement), class: 'form-check-input', id: "requirements_#{requirement}"%>
         </div>
        <% end %>
-       <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-cu' %>     
-       <% end %>                
         </div>
 
         <div>
-          <%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
-          <%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-cu' %>
         </div>
     </div>
 
+</div>
+ <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-cu' %>     
+<% end %>
+    
+</div>    
+<%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
+    
 <table class="table table-hover col-md-12" id="movies">
   <thead>
     <tr>
@@ -79,12 +82,13 @@
     <td>
       <div class="form-check  form-check-inline">
           <%= label_tag "addCart[#{course.course_num}]", "", class: 'form-check-label' %>
-          <%= check_box_tag "addCart[#{course.course_num}]", "1", @addCart.include?(course.course_num), class: 'form-check-input', id: "addCart[#{course.course_num}]"%>
+          <%= check_box_tag "addCart[#{course.course_num}]", "0", @addCart.include?(course.course_num), class: 'form-check-input', id: "addtoCart[#{course.course_num}]"%>
       </div>  
     </td>      
       </tr>
     <% end %>
   </tbody>
 </table>
+<%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-cu' %> 
 <% end %>
 </div>

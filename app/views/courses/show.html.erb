@@ -73,6 +73,10 @@
   </div>
   <br>
 
+<%= button_to 'I am interested in this course!', course_likes_path(@course), method: :post %>
+<p><%= @course.likes.count %> <%= (@course.likes.count) == 1 ? ' student interested in this course' : ' students interested in this course'%></p>
+
+
   <h2>FAQs</h2>
 
   <br>
