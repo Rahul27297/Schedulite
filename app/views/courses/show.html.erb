@@ -11,8 +11,8 @@
     </div>
   </div>
 
-  <div>
-  <table class="table table-hover col-md-12" id="details">
+  <div class="row">
+  <table class="table table-hover col-md-7" id="details">
       <tr>
       <td>
       <label class="font-weight-bold"> Number: </label>
@@ -70,10 +70,21 @@
       </td>
       </tr>
     </table>
+    <div class="col-4 offset-1">
+    <div class="card mb-3 shadow-lg mb-5 bg-white rounded">
+        <div class="card-header" style="background-color: #9BDDFF; color: white">
+          Course Popularity
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= @course.likes.count %> <%= (@course.likes.count) == 1 ? ' student interested in this course' : ' students interested in this course'%></h5>
+          <%= button_to 'I am interested in this course!', course_likes_path(@course), method: :post, class: "btn btn-cu" %>
+        </div>
+        </div>
+    </div>
   </div>
   <br>
 
-<%= button_to 'I am interested in this course!', course_likes_path(@course), method: :post %>
+
 <p><%= @course.likes.count %> <%= (@course.likes.count) == 1 ? ' student interested in this course' : ' students interested in this course'%></p>
 
 
