@@ -1,21 +1,21 @@
-<%= form_tag updatedcourses_path, method: :get, id: 'departments_form' do %>
 
-
- <div class="row">
-         <div class="col-12">
-         <label class="label_name"> Already Taken: </label>
- 	<% @courses.each do |course| %>
-         <div class="form-check  form-check-inline">
-           <%= label_tag "show_course[#{course.course_num}]", course.course_num, class: 'form-check-label' %>
-           <%= check_box_tag "show_course[#{course.course_num}]", "0",  false, class: 'form-check-input', id: "showcourses_#{course.course_num}"%>
-         </div>	
+<div style="margin-left: 40px;margin-right:40px">
+        <%= form_tag updatedcourses_path, method: :get, id: 'departments_form' do %>
+                <div class="row" style="margin-top: 20px">
+                <div class="col-12">
+                <label class="label_name"> <h4>Already Taken: </h4></label>
+                <% @courses.each do |course| %>
+                <div class="form-check  form-check-inline">
+                        <h5><%= label_tag "show_course[#{course.course_num}]", course.course_num, class: 'form-check-label' %>
+                        <%= check_box_tag "show_course[#{course.course_num}]", "0",  false, class: 'form-check-input', id: "showcourses_#{course.course_num}"%></h5>
+                </div>
+                <% end %>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-6">
+        <%= submit_tag 'Update Course List', id: 'departments_submit', class: 'btn btn-cu' %>
+        </div>	
+        </div>
         <% end %>
- <div class="row">
-         <div class="col-12">
-             <%= submit_tag 'Update Course List', id: 'departments_submit', class: 'btn btn-primary' %>
-         </div>
-     </div>	
-         </div>
- </div>
- <% end %>
-
+</div>

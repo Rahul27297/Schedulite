@@ -13,6 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+#login-page {
+  background-image: url('CU-background.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#cu-navbar {
+  visibility: visible;
+}
+ 
 .logo_image {
   left: 270px;
   position: absolute;

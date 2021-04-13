@@ -14,6 +14,7 @@ class AuthenticationController < ApplicationController
         session[:user] = token
         puts "increasing the session time"  
         update_activity_time
+        ApplicationController.user_logged_in = 1
         redirect_to courses_path
     else
       render :template => "authentication/login"
@@ -23,6 +24,7 @@ class AuthenticationController < ApplicationController
   
   def logout
       session_user_kill
+      @user_logged_in = 0
       render :template => "authentication/login"
   end  
     

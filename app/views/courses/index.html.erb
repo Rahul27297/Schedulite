@@ -28,17 +28,13 @@
           <%= check_box_tag "requirements[#{requirement}]", "1",  @requirements_to_show.include?(requirement), class: 'form-check-input', id: "requirements_#{requirement}"%>
         </div>
        <% end %>
-        </div>
 
-        <div>
-        </div>
     </div>
-
-</div>
  <%= submit_tag 'Refresh', id: 'departments_submit', class: 'btn btn-cu' %>     
 <% end %>
+</div>
     
-</div>    
+   
 <%= form_tag courses_add_cart_path, method: :post, id: 'add_to_cart_form' do %>
     
 <table class="table table-hover col-md-12" id="movies">
@@ -51,7 +47,7 @@
       <th>Requirement</th>
       <th>Course Day/Time</th>
       <th>More About</th>
-      <th>Cart</th>  
+      <th><%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-cu' %> </th>  
     </tr>
       
   </thead>
@@ -79,7 +75,7 @@
     <td>
       <%= link_to "More about #{course.course_name}", course_detail_path(course) %>
     </td>
-    <td>
+    <td style="text-align: center;">
       <div class="form-check  form-check-inline">
           <%= label_tag "addCart[#{course.course_num}]", "", class: 'form-check-label' %>
           <%= check_box_tag "addCart[#{course.course_num}]", "0", @addCart.include?(course.course_num), class: 'form-check-input', id: "addtoCart[#{course.course_num}]"%>
@@ -89,6 +85,5 @@
     <% end %>
   </tbody>
 </table>
-<%= submit_tag 'Add To Cart', id: 'addcart_submit', class: 'btn btn-cu' %> 
 <% end %>
 </div>
