@@ -1,6 +1,13 @@
-<%= form_tag searchresults_url, :method => 'get' do %>
-	<p>
-	<%= text_field_tag :search, params[:search] %>
-	<%= submit_tag "Search", :name => nil %>
-	</p>
-<% end %>
+<div class="row" style="margin-top:20px">
+	<div class="col-6 offset-3">
+	<%= form_tag searchresults_url, :method => 'get' do %>
+		<div class="input-group mb-3">
+			<%= text_field_tag :search, params[:search], :class => "form-control", :placeholder => "COMS W1004" %>
+			<div class="input-group-append">
+				<%= submit_tag "Search", :name => nil, :class => "btn btn-cu" %>
+			</div>
+		</div>
+	<% end %>
+
+	</div>
+</div>

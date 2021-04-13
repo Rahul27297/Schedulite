@@ -1,31 +1,34 @@
+<body style="height: 720px" id="login-page">
 <% if flash[:error] %>
    <div class="alert alert-danger">
      <span class="error"><%= flash[:error] %></span>
    </div>
 <% end %>
-
-<div class="row d-flex justify-content-center" style="margin-top: 150px">
-   <div class="card text-center mb-3 shadow-lg mb-5 bg-white rounded" style="border:1px solid #9BDDFF;">
-      <div class="card-header text-white" style="background-color: #9BDDFF">
-         <h3 style="margin-bottom: 5px">Schedulite</h3>
-         <h5>The New Way of Personalized Scheduling</h5>
-      </div>
-      <div class="card-body">
-         <%= form_tag login_path, method: :get do %>
-            <div class="form-group row">
-            <%= label_tag :username, nil, class: "col-3 col-form-label", style:"padding-left: 15px; padding-right: 0px" %>
-            <div class="col-9">
-               <%= text_field_tag :username, nil, class: "form-control" %>
-            </div>
-            </div>
-            <div class="form-group row">
-            <%= label_tag :password, nil, class: "col-3 col-form-label", style:"padding-left: 15px; padding-right: 0px"%>
-            <div class="col-9">
-               <%= password_field_tag :password, nil, class: "form-control" %>
-            </div>
-            </div>
-            <%= submit_tag "Login" ,class: "btn btn-block text-white", style: "background-color: #9BDDFF" %>
-         <%end%>
+<div style="width: 100%; height: 100%; padding-bottom: 100px;">
+   <div class="row d-flex justify-content-center" style="margin-top: 225px">
+      <div class="card text-center mb-3 shadow-lg mb-5 bg-white rounded" style="border:1px solid #9BDDFF;">
+         <div class="card-header text-white" style="background-color: #9BDDFF">
+            <h3 style="margin-bottom: 5px">Schedulite</h3>
+            <h5>The New Way of Personalized Scheduling</h5>
+         </div>
+         <div class="card-body">
+            <%= form_tag login_path, method: :get do %>
+               <div class="form-group row">
+               <%= label_tag :username, nil, class: "col-3 col-form-label", style:"padding-left: 15px; padding-right: 0px" %>
+               <div class="col-9">
+                  <%= text_field_tag :username, nil, class: "form-control" %>
+               </div>
+               </div>
+               <div class="form-group row">
+               <%= label_tag :password, nil, class: "col-3 col-form-label", style:"padding-left: 15px; padding-right: 0px"%>
+               <div class="col-9">
+                  <%= password_field_tag :password, nil, class: "form-control" %>
+               </div>
+               </div>
+               <%= submit_tag "Login" ,class: "btn btn-block text-white", style: "background-color: #9BDDFF" %>
+            <%end%>
+         </div>
       </div>
    </div>
 </div>
+</body>

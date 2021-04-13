@@ -36,18 +36,18 @@ class CoursesController < ApplicationController
         @courses = Course.filter_by_params(@department, @query_courses.keys)
         if !(params.has_key?(:requirements))
          	@courses = Course.all
- 	end
-	if params[:search]
-	 	@courses = Course.where("course_num LIKE ?", "%#{params[:search]}%")
-	end
+ 	    end
+        if params[:search]
+            @courses = Course.where("course_num LIKE ?", "%#{params[:search]}%")
+        end
     end
 
     def searchresults
-         if params[:search]
-                @courses = Course.where("course_num LIKE ?", "%#{params[:search]}%")
-         else
-		@courses = Course.all
-	 end
+        if params[:search]
+            @courses = Course.where("course_num LIKE ?", "%#{params[:search]}%")
+        else
+		    @courses = Course.all
+	    end
     end
 
 
