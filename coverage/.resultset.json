@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/course.rb": {
+      "/home/codio/workspace/Schedulite/app/models/course.rb": {
         "lines": [
           1,
           null,
@@ -40,19 +40,19 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/coursedetails.rb": {
+      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/course_faq.rb": {
+      "/home/codio/workspace/Schedulite/app/models/course_faq.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/user.rb": {
+      "/home/codio/workspace/Schedulite/app/models/user.rb": {
         "lines": [
           1,
           1,
@@ -62,7 +62,7 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/authentication_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/authentication_controller.rb": {
         "lines": [
           1,
           1,
@@ -81,12 +81,14 @@
           18,
           18,
           18,
+          18,
           null,
           18,
           null,
           null,
           null,
           null,
+          1,
           1,
           1,
           1,
@@ -95,7 +97,7 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/application_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/application_controller.rb": {
         "lines": [
           1,
           null,
@@ -104,6 +106,17 @@
           1,
           null,
           1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          18,
+          null,
+          null,
+          1,
+          70,
           70,
           70,
           70,
@@ -116,12 +129,15 @@
           70,
           0,
           null,
+          70,
+          null,
           null,
           0,
           null,
           null,
           null,
           1,
+          48,
           48,
           48,
           48,
@@ -169,31 +185,31 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/application_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/authentication_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/authentication_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/likes_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/likes_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/movies_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/courses_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           1,
@@ -349,19 +365,19 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/cart.rb": {
+      "/home/codio/workspace/Schedulite/app/models/cart.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/course_faq_an.rb": {
+      "/home/codio/workspace/Schedulite/app/models/course_faq_an.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/like.rb": {
+      "/home/codio/workspace/Schedulite/app/models/like.rb": {
         "lines": [
           1,
           1,
@@ -369,7 +385,7 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/likes_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/likes_controller.rb": {
         "lines": [
           null,
           null,
@@ -400,25 +416,26 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/prev_courses_form.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/user_controller.rb": {
         "lines": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0
         ],
         "branches": {
         }
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/user_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/models/prev_courses_form.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
           0,
           0
         ],
@@ -426,53 +443,142 @@
         }
       }
     },
-    "timestamp": 1618177337
+    "timestamp": 1618862493
   },
   "RSpec": {
     "coverage": {
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/application_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/authentication_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/authentication_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/likes_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/likes_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/helpers/movies_helper.rb": {
+      "/home/codio/workspace/Schedulite/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/authentication_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          9,
+          9,
+          9,
+          1,
+          1,
+          1,
+          1,
+          null,
+          9,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          3,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/controllers/authentication_controller.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           0,
           null,
@@ -480,6 +586,7 @@
           null,
           null,
           1,
+          0,
           0,
           0,
           null,
@@ -487,117 +594,25 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          1,
-          13,
-          13,
-          13,
-          13,
-          13,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          13,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          1,
-          13,
-          0,
-          null,
-          13,
-          null,
-          null,
-          1,
-          13,
-          13,
-          13,
-          13,
-          13,
-          null,
-          null,
-          null,
-          1,
-          13,
-          13,
-          null,
-          null,
-          1,
-          13,
-          13,
-          13,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/courses_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/courses_controller.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
           1,
-          null,
+          1,
+          1,
+          1,
           0,
           0,
-          0,
-          null,
-          0,
-          null,
-          null,
           0,
           0,
           0,
@@ -608,6 +623,24 @@
           null,
           null,
           1,
+          null,
+          1,
+          1,
+          0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
           0,
           0,
           null,
@@ -617,138 +650,138 @@
           null,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          0,
-          0,
-          null,
-          null,
+          1,
+          1,
+          1,
+          1,
           1,
           0,
           0,
-          0,
           null,
           0,
           0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/likes_controller.rb": {
-        "lines": [
           null,
           null,
           null,
           1,
           1,
           null,
+          null,
           1,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          null,
-          null,
+          1,
+          1,
           1,
           null,
           1,
           0,
           null,
+          5,
+          null,
           null,
           1,
           0,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          7,
+          7,
+          7,
+          7,
+          7,
+          6,
+          5,
+          5,
+          5,
+          11,
+          11,
+          11,
+          11,
+          2,
+          2,
+          null,
+          9,
+          null,
+          null,
+          5,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          2,
           null,
           null,
           null,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/like.rb": {
+      "/home/codio/workspace/Schedulite/app/controllers/likes_controller.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/models/like.rb": {
         "lines": [
           1,
           1,
@@ -756,91 +789,88 @@
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/prev_courses_form.rb": {
+      "/home/codio/workspace/Schedulite/app/models/prev_courses_form.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/course.rb": {
+      "/home/codio/workspace/Schedulite/app/models/user.rb": {
         "lines": [
           1,
-          null,
           1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          0,
           null,
           null,
           1,
           null
         ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/coursedetails.rb": {
+      "/home/codio/workspace/Schedulite/app/models/course.rb": {
         "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/cart.rb": {
-        "lines": [
+          null,
           1,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/course_faq.rb": {
-        "lines": [
           1,
-          null
-        ]
-      },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/course_faq_an.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/models/user.rb": {
-        "lines": [
-          0,
-          0,
+          1,
+          1,
+          null,
+          1,
+          2,
           null,
           null,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          3,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null
+        ]
       },
-      "/Users/janelleponnor/Desktop/merge_search_Schedulite/app/controllers/user_controller.rb": {
+      "/home/codio/workspace/Schedulite/app/models/cart.rb": {
         "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/models/coursedetails.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/models/course_faq.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/models/course_faq_an.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/codio/workspace/Schedulite/app/controllers/user_controller.rb": {
+        "lines": [
+          0,
           0,
           0,
           0,
@@ -857,6 +887,6 @@
         }
       }
     },
-    "timestamp": 1618177306
+    "timestamp": 1618862481
   }
 }
