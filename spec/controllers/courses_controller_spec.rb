@@ -18,6 +18,9 @@ end
 RSpec.describe CoursesController, type: :controller do
     
  describe 'GET#index' do
+    before do
+       allow(controller).to receive(:authenticate).and_return(true)
+    end
     it 'returns a succes response' do
       get :index
       expect(response).to be_success
@@ -27,6 +30,7 @@ RSpec.describe CoursesController, type: :controller do
  describe 'GET#Show' do
   course1 = {}
   before do
+    allow(controller).to receive(:authenticate).and_return(true)    
     Course.create(:id => 555, :course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
     Coursedetails.create(:number => 'C1', :points => '3', :coursetype =>'LECTURE', :method_of_inst =>'Hybrid', :detail => '----------')
   end
@@ -38,6 +42,7 @@ RSpec.describe CoursesController, type: :controller do
     
  describe 'POST#add_to_cart' do
   before do
+    allow(controller).to receive(:authenticate).and_return(true)  
     Course.create(:course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
     Course.create(:course_num => 'C2', :dept => 'Computer Science', :course_name => 'Data Structures in Java', :professor => 'Paul B', :requirement => 'Major Core', :course_time => 'MW 4:10pm-5:25pm')
     Course.create(:course_num => 'C3', :dept => 'Computer Science', :course_name => 'Computer Networks', :professor => 'Henning S', :requirement => 'Major Core', :course_time => 'MW 4:10pm-5:25pm')
@@ -75,6 +80,7 @@ RSpec.describe CoursesController, type: :controller do
 
 describe 'POST#add_faq' do
   before do
+    allow(controller).to receive(:authenticate).and_return(true)    
     Course.create(:id => '591', :course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
     CourseFaq.create(:number => 'Q1', :question => 'What is the grading schema?', :course_number => 'COMSW 1004')
     CourseFaq.create(:number => 'Q2', :question => 'What are the pre-requisites for this course?', :course_number => 'COMSW 1005')
@@ -87,6 +93,7 @@ end
    
 describe 'POST#add_ans' do
   before do
+    allow(controller).to receive(:authenticate).and_return(true)    
     Course.create(:id => '591', :course_num => 'C1', :dept => 'Computer Science', :course_name => 'Intro to Computer Science', :professor => 'Adam Cannon', :requirement => 'Major Core', :course_time => 'TR 4:10pm-5:25pm')
     CourseFaq.create(:id => 'Q1', :number => 'Q1', :question => 'What is the grading schema?', :course_number => 'COMSW 1004')
   end
@@ -98,17 +105,23 @@ end
 
 
  describe 'GET#prevcoursesform' do
-    it 'returns a succes response' do
-      get :prevcoursesform
-      expect(response).to be_success
-    end
-  end
+     before do
+        allow(controller).to receive(:authenticate).and_return(true)
+     end
+     it 'returns a succes response' do
+       get :prevcoursesform
+       expect(response).to be_success
+     end
+ end
 
-describe 'GET#updatedcourses' do
+ describe 'GET#updatedcourses' do
+    before do
+        allow(controller).to receive(:authenticate).and_return(true)
+    end
     it 'returns a succes response' do
       get :updatedcourses
       expect(response).to be_success
     end
-  end
+ end
     
 end
