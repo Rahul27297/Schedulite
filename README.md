@@ -1,10 +1,10 @@
 Please refer to README.md in the git repo root directory.
 
-Member 1 Name: Janelle Ponnor
+Member 1 Name: Janelle Ponnor, 
 Member 1 UNI: jp4024
-Member 2 Name: Rahul Sunil Chaudhari
+Member 2 Name: Rahul Sunil Chaudhari, 
 Member 2 UNI: rc3374
-Member 3 Name: Hemanth Chandra Palle
+Member 3 Name: Hemanth Chandra Palle, 
 Member 3 UNI: hp2581
 
 
