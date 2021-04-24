@@ -16,10 +16,17 @@ Github repo link: https://github.com/Rahul27297/Schedulite.git
 Application login credentials:
 
 username: rc3374@columbia.edu
+
 password: 123
 
+
+
 username: hp2581@columbia.edu
+
 password: Abc567*
 
+
+
 username: jp4024@columbia.edu
+
 password: 123
